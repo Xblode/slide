@@ -1,0 +1,21 @@
+{
+  "name": "slider-presentation",
+  "version": "1.0.0",
+  "description": "Présentation slider style Google Slides",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "slider",
+    "presentation",
+    "slides"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
+
