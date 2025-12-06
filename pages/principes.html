@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principes - BOOMKŒUR.EXE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="page-container" style="padding: 40px;">
+            <div class="page-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center mb-2">
+                    <span class="w-3 h-3 accent-bg mr-3"></span>
+                    <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">PRINCIPES</p>
+                </div>
+                <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                    PRINCIPES <span class="text-[#333] mx-2">//</span> <span class="accent-text">GOUVERNANCE</span>
+                </h1>
+            </div>
+            
+            <div class="page-body">
+                <!-- Diagnostic Général -->
+                <div class="principles-intro" style="margin-bottom: 48px; padding: 32px; background: #0a0a0a; border: 2px solid #333; border-left: 4px solid #FF5500;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-stethoscope text-[#FF5500] text-2xl mr-4"></i>
+                        <h3 class="font-['Oswald'] text-2xl uppercase text-white">DIAGNOSTIC GÉNÉRAL</h3>
+                    </div>
+                    <p class="font-['Inter'] text-gray-300 text-xl leading-relaxed font-light" style="margin: 0 0 20px 0;">
+                        On a l'<span class="text-white font-semibold">énergie</span>, les <span class="text-white font-semibold">idées</span>, 
+                        la <span class="text-white font-semibold">communauté</span> et l'<span class="text-white font-semibold">ambition</span> 
+                        d'un vrai collectif techno/rave.
+                    </p>
+                    <div class="h-px bg-[#333] my-4"></div>
+                    <p class="font-['Inter'] text-gray-400 text-lg leading-relaxed" style="margin: 0;">
+                        Ce qui manque aujourd'hui, c'est un <span class="accent-text font-semibold">cadre clair</span> : 
+                        qui fait quoi, comment on décide, comment on communique, à quoi on s'engage.
+                    </p>
+                </div>
+
+                <!-- Climat Général: Split Positif/Négatif -->
+                <div style="margin-bottom: 64px;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">BILAN // DIAGNOSTIC</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            CLIMAT <span class="accent-text">GÉNÉRAL</span>
+                        </h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                        <!-- Colonne Positive -->
+                        <div style="padding: 32px; background: linear-gradient(135deg, #0a1a0a 0%, #0a0a0a 100%); border: 2px solid #2a4a2a;">
+                            <h3 class="font-['Oswald'] text-2xl uppercase text-white mb-4 flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                CE QUI EST POSITIF
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <span class="accent-text mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">PASSION TECHNO</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Amour profond de la musique, de la fête et des soirées partagées</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="accent-text mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">COMMUNAUTÉ SOLIDE</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Une fanbase fidèle et une communauté qui suit et soutient le projet</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="accent-text mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">AMBITION PRO</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Volonté commune de professionnalisation et d'évolution sérieuse</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="accent-text mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">CRÉATIVITÉ</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Foisonnement d'idées pour le contenu, les événements et le merch</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colonne Négative -->
+                        <div style="padding: 32px; background: linear-gradient(135deg, #1a0a0a 0%, #0a0a0a 100%); border: 2px solid #4a2a2a;">
+                            <h3 class="font-['Oswald'] text-2xl uppercase text-white mb-4 flex items-center">
+                                <i class="fas fa-exclamation-triangle text-[#FF5500] mr-3"></i>
+                                CE QUI FAIT MAL
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <span class="text-[#FF5500] mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">FATIGUE INTERNE</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Épuisement, frustrations accumulées et année perçue comme "dure"</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-[#FF5500] mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">COMMUNICATION</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Échanges compliqués, maladroits ou générateurs de tensions</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-[#FF5500] mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">DÉFICIT D'ÉCOUTE</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Sentiment individuel de ne pas toujours être entendu ou considéré</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-[#FF5500] mr-3 mt-1">//</span>
+                                    <div>
+                                        <p class="font-['Inter'] font-semibold text-white">FLOU ORGANISATIONNEL</p>
+                                        <p class="font-['Inter'] text-sm text-gray-400">Manque de cadre clair générant de l'incertitude et du stress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Points d'Accord -->
+                <div style="margin-bottom: 64px;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">CONSENSUS</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            CE SUR QUOI ON EST <span class="accent-text">D'ACCORD</span>
+                        </h2>
+                    </div>
+
+                    <div class="principles-list">
+                        <!-- Point 1 -->
+                        <div class="principle-card group">
+                            <span class="bg-number">01</span>
+                            <div class="check-box">
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="content-wrapper relative z-10">
+                                <h3 class="principle-title">COMMUNICATION INTERNE</h3>
+                                <p class="principle-desc">La communication interne doit être <span class="highlight">impérativement améliorée</span> pour éviter les malentendus.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 2 -->
+                        <div class="principle-card group">
+                            <span class="bg-number">02</span>
+                            <div class="check-box">
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="content-wrapper relative z-10">
+                                <h3 class="principle-title">CLARTÉ DES RÔLES</h3>
+                                <p class="principle-desc">Les rôles et responsabilités <span class="highlight">ne sont pas assez clairs</span> aujourd'hui.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 3 -->
+                        <div class="principle-card group">
+                            <span class="bg-number">03</span>
+                            <div class="check-box">
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="content-wrapper relative z-10">
+                                <h3 class="principle-title">STRUCTURE & ORGANISATION</h3>
+                                <p class="principle-desc">On veut plus de structure pour <span class="highlight">ne plus naviguer à vue</span>.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 4 -->
+                        <div class="principle-card group">
+                            <span class="bg-number">04</span>
+                            <div class="check-box">
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="content-wrapper relative z-10">
+                                <h3 class="principle-title">PROFESSIONNALISATION</h3>
+                                <p class="principle-desc">On veut professionnaliser Boomkœur pour <span class="highlight">passer un cap</span>.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 5 -->
+                        <div class="principle-card group">
+                            <span class="bg-number">05</span>
+                            <div class="check-box">
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="content-wrapper relative z-10">
+                                <h3 class="principle-title">COHÉSION HUMAINE</h3>
+                                <p class="principle-desc">On tient à la cohésion humaine : <span class="highlight">amitié, écoute et respect</span> restent la base.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Points de Divergence -->
+                <div style="margin-bottom: 64px;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 bg-[#FF5500] mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">POINTS DE TENSION</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            LÀ OÙ NOS VISIONS <span class="text-[#FF5500]">DIVERGENT</span>
+                        </h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+                        <!-- Divergence 1 -->
+                        <div class="bias-item" style="padding: 24px; background: #0a0a0a; border: 2px solid #4a2a2a; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-calendar-days" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">NOMBRE D'ÉVÉNEMENTS</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Désaccord sur le volume annuel : certains souhaitent 3–6 dates, d'autres visent plus de 10 événements.
+                            </p>
+                        </div>
+
+                        <!-- Divergence 2 -->
+                        <div class="bias-item" style="padding: 24px; background: #0a0a0a; border: 2px solid #4a2a2a; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-stopwatch" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">LE RYTHME</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Opposition entre stratégie de rareté (exclusivité) et stratégie de fréquence (présence continue).
+                            </p>
+                        </div>
+
+                        <!-- Divergence 3 -->
+                        <div class="bias-item" style="padding: 24px; background: #0a0a0a; border: 2px solid #4a2a2a; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-battery-half" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">NIVEAU D'ENGAGEMENT</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Écarts importants d'investissement personnel : de 3–4h/mois pour certains à 30–60h/mois pour d'autres.
+                            </p>
+                        </div>
+
+                        <!-- Divergence 4 -->
+                        <div class="bias-item" style="padding: 24px; background: #0a0a0a; border: 2px solid #4a2a2a; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-handshake-slash" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">GESTION DES ENGAGEMENTS</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Comment réagir face à ceux qui ne tiennent pas leurs engagements ? (Sanction vs Responsabilisation).
+                            </p>
+                        </div>
+
+                        <!-- Divergence 5 -->
+                        <div class="bias-item" style="padding: 24px; background: #0a0a0a; border: 2px solid #4a2a2a; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-map-location-dot" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">AMBITION GÉOGRAPHIQUE</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Quelle place pour Boomkœur : acteur purement local ou développement régional/national ?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ce qui bloque -->
+                <div style="margin-bottom: 64px;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 bg-red-600 mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">ORGANISATION & RÉUNIONS</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            ORGANISATION ACTUELLE : <span class="text-red-500">CE QUI BLOQUE</span>
+                        </h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                        <!-- Blocage 1 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-triangle-exclamation" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">RÉUNIONS FRUSTRANTES</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Les réunions sont vécues comme des moments de frustration et de perte d'énergie.
+                            </p>
+                        </div>
+
+                        <!-- Blocage 2 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-question" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">DÉCISIONS FLOUES</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Les décisions prises sont souvent floues ou non suivies d'effets concrets.
+                            </p>
+                        </div>
+
+                        <!-- Blocage 3 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-list-check" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">MANQUE DE SUIVI</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Absence de suivi rigoureux des tâches assignées et de leur avancement.
+                            </p>
+                        </div>
+
+                        <!-- Blocage 4 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-bolt" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">TENSIONS DANS L'ÉCHANGE</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Difficulté persistante à se parler et à échanger sans créer de tensions interpersonnelles.
+                            </p>
+                        </div>
+
+                        <!-- Blocage 5 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-gavel" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">MANQUE DE CADRE</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Absence d'un cadre clair et défini pour prendre des décisions efficaces.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risques si on ne change rien -->
+                <div style="margin-bottom: 64px; padding: 40px; background: linear-gradient(135deg, #1a0a0a 0%, #0a0000 100%); border: 2px solid #4a1a1a;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 bg-red-600 mr-3 animate-pulse"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">URGENCE & RISQUES</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            SI ON NE <span class="text-red-500">CHANGE RIEN...</span>
+                        </h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                        <!-- Risque 1 -->
+                        <div style="padding: 20px; background: rgba(0,0,0,0.5); border-left: 4px solid #FF5500;">
+                            <div style="display: flex; align-items-center; margin-bottom: 8px;">
+                                <i class="fas fa-fire-flame-curved" style="color: #FF5500; font-size: 18px; margin-right: 10px;"></i>
+                                <h4 class="font-['Oswald'] text-base uppercase text-white" style="margin: 0;">EXPLOSION DES TENSIONS</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.4;">
+                                Les conflits internes latents vont s'accentuer jusqu'au point de rupture.
+                            </p>
+                        </div>
+
+                        <!-- Risque 2 -->
+                        <div style="padding: 20px; background: rgba(0,0,0,0.5); border-left: 4px solid #FF5500;">
+                            <div style="display: flex; align-items-center; margin-bottom: 8px;">
+                                <i class="fas fa-user-slash" style="color: #FF5500; font-size: 18px; margin-right: 10px;"></i>
+                                <h4 class="font-['Oswald'] text-base uppercase text-white" style="margin: 0;">FUITE DES TALENTS</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.4;">
+                                Perte progressive des membres les plus motivés et compétents.
+                            </p>
+                        </div>
+
+                        <!-- Risque 3 -->
+                        <div style="padding: 20px; background: rgba(0,0,0,0.5); border-left: 4px solid #FF5500;">
+                            <div style="display: flex; align-items-center; margin-bottom: 8px;">
+                                <i class="fas fa-battery-empty" style="color: #FF5500; font-size: 18px; margin-right: 10px;"></i>
+                                <h4 class="font-['Oswald'] text-base uppercase text-white" style="margin: 0;">ESSOUFFLEMENT</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.4;">
+                                Épuisement de l'énergie collective et perte de la dynamique de projet.
+                            </p>
+                        </div>
+
+                        <!-- Risque 4 -->
+                        <div style="padding: 20px; background: rgba(0,0,0,0.5); border-left: 4px solid #FF5500;">
+                            <div style="display: flex; align-items-center; margin-bottom: 8px;">
+                                <i class="fas fa-eye-slash" style="color: #FF5500; font-size: 18px; margin-right: 10px;"></i>
+                                <h4 class="font-['Oswald'] text-base uppercase text-white" style="margin: 0;">IMAGE BROUILLÉE</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.4;">
+                                Perte de crédibilité auprès du public, des partenaires et des artistes.
+                            </p>
+                        </div>
+
+                        <!-- Risque 5 -->
+                        <div style="padding: 20px; background: rgba(0,0,0,0.5); border-left: 4px solid #FF5500;">
+                            <div style="display: flex; align-items-center; margin-bottom: 8px;">
+                                <i class="fas fa-anchor" style="color: #FF5500; font-size: 18px; margin-right: 10px;"></i>
+                                <h4 class="font-['Oswald'] text-base uppercase text-white" style="margin: 0;">STAGNATION</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.4;">
+                                Boomkœur restera un "petit collectif" alors qu'il a le potentiel de monter très haut.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Biais -->
+                <div class="biases-section" style="margin-top: 64px; padding-top: 48px; border-top: 2px solid #333;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">RÉFÉRENCE</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-3xl font-bold uppercase text-white leading-none mt-2">
+                            BIAIS IDENTIFIÉS <span class="text-[#333] mx-2">//</span> <span class="accent-text">À CONNAÎTRE</span>
+                        </h2>
+                        <p class="font-['Inter'] text-gray-400 text-sm mt-4" style="max-width: 800px;">
+                            Ces biais psycho-sociologiques ont été identifiés dans notre fonctionnement collectif. 
+                            Les connaître permet de mieux les éviter et d'améliorer nos processus décisionnels.
+                        </p>
+                    </div>
+
+                    <div class="biases-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                        <!-- Bias 1 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-couch" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">BIAIS DE CONFORMITÉ</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                On suit l'opinion du groupe même si on pense différemment.
+                            </p>
+                        </div>
+
+                        <!-- Bias 2 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-anchor" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">BIAIS DU STATU QUO</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Résistance au changement, préférence pour l'existant.
+                            </p>
+                        </div>
+
+                        <!-- Bias 3 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-users" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">GROUPTHINK</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Pensée de groupe, absence de critique constructive.
+                            </p>
+                        </div>
+
+                        <!-- Bias 4 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-copy" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">DILUTION DE RESPONSABILITÉ</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                "Quelqu'un d'autre va sûrement répondre."
+                            </p>
+                        </div>
+
+                        <!-- Bias 5 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-eye-slash" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">BIAIS DE CONFIRMATION</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                On cherche des informations qui confirment nos croyances.
+                            </p>
+                        </div>
+
+                        <!-- Bias 6 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-brain" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">SURCHARGE COGNITIVE</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Trop d'informations à traiter, décisions différées.
+                            </p>
+                        </div>
+
+                        <!-- Bias 7 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-handshake-slash" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">ÉVITEMENT DU CONFLIT</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                On évite les discussions difficiles, même nécessaires.
+                            </p>
+                        </div>
+
+                        <!-- Bias 8 -->
+                        <div class="bias-item" style="padding: 20px; background: #0a0a0a; border: 2px solid #333; transition: all 0.3s ease;">
+                            <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                <i class="fas fa-user-friends" style="color: #FF5500; font-size: 20px; margin-right: 12px;"></i>
+                                <h4 class="font-['Oswald'] text-lg uppercase text-white" style="margin: 0;">EFFET DE HALO</h4>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-400" style="margin: 0; line-height: 1.5;">
+                                Une bonne impression générale influence toutes les perceptions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>
+

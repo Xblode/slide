@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing - BOOMKŒUR.EXE</title>
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="marketing-container" style="padding: 40px;">
+            <!-- Page Header -->
+            <div class="marketing-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">MARKETING HUB</p>
+                        </div>
+                        <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                            MARKETING <span class="text-[#333] mx-2">//</span> <span class="accent-text">STRATÉGIE</span>
+                        </h1>
+                    </div>
+                    <div class="marketing-stats" style="display: flex; align-items: center; gap: 24px;">
+                        <div class="stat-item">
+                            <span class="stat-number" id="marketing-objectives-count">0</span>
+                            <span class="stat-label">OBJECTIFS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="marketing-kpis-count">6</span>
+                            <span class="stat-label">KPIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Marketing Consolidé -->
+            <div class="marketing-dashboard-section" style="margin-bottom: 40px;">
+                <div class="section-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #FF5500; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                        <i class="fas fa-chart-line" style="color: #FF5500;"></i>
+                    </div>
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 28px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                        DASHBOARD MARKETING
+                    </h2>
+                </div>
+
+                <!-- KPIs Marketing -->
+                <div class="marketing-kpis-dashboard" style="margin-bottom: 30px;">
+                    <div class="kpis-header">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="kpis-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="kpis-title">INDICATEURS MARKETING GLOBAUX</h3>
+                        </div>
+                    </div>
+                    <div class="kpis-grid" id="marketing-kpis-grid">
+                        <!-- Les KPIs seront chargés dynamiquement depuis kpis-manager.js -->
+                    </div>
+                </div>
+
+                <!-- Objectifs Marketing Actifs -->
+                <div class="marketing-objectives-active" style="background: #0a0a0a; border: 2px solid #333; padding: 24px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                        <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: white; margin: 0; text-transform: uppercase;">
+                            <i class="fas fa-bullseye" style="color: #FF5500; margin-right: 12px;"></i>
+                            OBJECTIFS MARKETING ACTIFS
+                        </h3>
+                        <button class="btn-new-objective" id="btn-new-smart-objective" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-plus"></i> Nouvel objectif
+                        </button>
+                    </div>
+                    <div id="marketing-objectives-list" class="objectives-list-compact">
+                        <!-- Les objectifs marketing seront chargés dynamiquement -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outils Marketing -->
+            <div class="marketing-tools-section" style="margin-bottom: 40px;">
+                <div class="section-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #4ade80; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                        <i class="fas fa-tools" style="color: #4ade80;"></i>
+                    </div>
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 28px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                        OUTILS MARKETING
+                    </h2>
+                </div>
+
+                <div class="tools-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
+                    <!-- Framework SMART -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openSmartModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(255, 85, 0, 0.1); border: 2px solid #FF5500; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-bullseye" style="color: #FF5500;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    GÉNÉRATEUR SMART
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Créer un objectif marketing structuré</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Créez des objectifs marketing SMART (Spécifique, Mesurable, Atteignable, Réaliste, Temporel) avec un formulaire guidé.
+                        </p>
+                    </div>
+
+                    <!-- Personas -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openPersonasModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(74, 222, 128, 0.1); border: 2px solid #4ade80; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-user-friends" style="color: #4ade80;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    PERSONAS
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Définir et gérer vos personas</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Créez et gérez vos personas marketing pour mieux comprendre et cibler votre audience.
+                        </p>
+                    </div>
+
+                    <!-- Analyse Concurrentielle -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openCompetitiveAnalysisModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(96, 165, 250, 0.1); border: 2px solid #60a5fa; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-chart-scatter" style="color: #60a5fa;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    ANALYSE CONCURRENTIELLE
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Positionnement vs concurrents</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Analysez vos concurrents et visualisez votre positionnement sur un graphique multi-critères.
+                        </p>
+                    </div>
+
+                    <!-- Matrice Objectifs vs KPIs -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openObjectivesKPIsMatrix()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(251, 191, 36, 0.1); border: 2px solid #fbbf24; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-th" style="color: #fbbf24;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    MATRICE OBJECTIFS / KPIs
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Visualiser les liens</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Visualisez quels KPIs sont impactés par quels objectifs marketing.
+                        </p>
+                    </div>
+
+                    <!-- Timeline Marketing -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openTimelineModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(139, 92, 246, 0.1); border: 2px solid #8b5cf6; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-calendar-alt" style="color: #8b5cf6;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    TIMELINE 2026
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Vue calendrier des objectifs</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Visualisez vos objectifs marketing sur une timeline avec jalons et échéances.
+                        </p>
+                    </div>
+
+                    <!-- Analyse SWOT -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openSWOTModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(236, 72, 153, 0.1); border: 2px solid #ec4899; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-th-large" style="color: #ec4899;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    ANALYSE SWOT
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Forces, Faiblesses, Opportunités, Menaces</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Identifiez vos forces, faiblesses, opportunités et menaces pour générer de nouveaux objectifs.
+                        </p>
+                    </div>
+
+                    <!-- Analyse des Gaps -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openGapsAnalysisModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(34, 197, 94, 0.1); border: 2px solid #22c55e; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-chart-line" style="color: #22c55e;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    ANALYSE DES GAPS
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Où on est vs Où on veut être</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Identifiez les écarts entre votre situation actuelle et vos objectifs pour créer des plans d'action.
+                        </p>
+                    </div>
+
+                    <!-- Performance par Canal -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openChannelPerformanceModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(59, 130, 246, 0.1); border: 2px solid #3b82f6; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-broadcast-tower" style="color: #3b82f6;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    PERFORMANCE PAR CANAL
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Instagram, Shotgun, etc.</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Comparez les performances de vos différents canaux marketing et optimisez vos investissements.
+                        </p>
+                    </div>
+
+                    <!-- Calendrier Éditorial -->
+                    <div class="tool-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; transition: all 0.3s ease; cursor: pointer;" onclick="openEditorialCalendarModal()">
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                            <div style="width: 56px; height: 56px; background: rgba(168, 85, 247, 0.1); border: 2px solid #a855f7; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                                <i class="fas fa-calendar-week" style="color: #a855f7;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase;">
+                                    CALENDRIER ÉDITORIAL
+                                </h3>
+                                <p style="font-size: 12px; color: #999; margin: 4px 0 0 0;">Planification des contenus</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; color: #ccc; line-height: 1.6; margin: 0;">
+                            Planifiez vos contenus marketing avec un calendrier éditorial structuré.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Framework SMART -->
+    <div class="modal-overlay" id="modal-smart" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">GÉNÉRATEUR D'OBJECTIF SMART</h2>
+                <button class="modal-close" onclick="closeSmartModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="smart-form-container">
+                    <!-- Le formulaire sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Personas -->
+    <div class="modal-overlay" id="modal-personas" style="display: none;">
+        <div class="modal-content" style="max-width: 1000px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">GESTION DES PERSONAS</h2>
+                <button class="modal-close" onclick="closePersonasModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 24px;">
+                    <button class="btn-new-persona" onclick="openNewPersonaForm()" style="background: #4ade80; color: white; border: none; padding: 12px 24px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                        <i class="fas fa-plus"></i> Créer un nouveau persona
+                    </button>
+                </div>
+                <div id="personas-list-container">
+                    <!-- Liste des personas -->
+                </div>
+                <div id="persona-form-container" style="display: none;">
+                    <!-- Formulaire de création/édition -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Analyse Concurrentielle -->
+    <div class="modal-overlay" id="modal-competitive" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">ANALYSE CONCURRENTIELLE</h2>
+                <button class="modal-close" onclick="closeCompetitiveAnalysisModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 24px;">
+                    <button class="btn-new-competitor" onclick="openNewCompetitorForm()" style="background: #60a5fa; color: white; border: none; padding: 12px 24px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                        <i class="fas fa-plus"></i> Ajouter un concurrent
+                    </button>
+                </div>
+                <div id="competitors-list-container">
+                    <!-- Liste des concurrents -->
+                </div>
+                <div id="competitor-form-container" style="display: none;">
+                    <!-- Formulaire de création/édition -->
+                </div>
+                <div id="competitive-chart-container" style="margin-top: 40px; padding: 24px; background: #0a0a0a; border: 2px solid #333;">
+                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: white; margin: 0 0 20px 0; text-transform: uppercase;">
+                        <i class="fas fa-chart-scatter" style="color: #60a5fa; margin-right: 12px;"></i>
+                        POSITIONNEMENT CONCURRENTIEL
+                    </h3>
+                    <div id="competitive-chart" style="width: 100%; height: 500px; position: relative;">
+                        <!-- Graphique de positionnement -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Matrice Objectifs vs KPIs -->
+    <div class="modal-overlay" id="modal-matrix" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">MATRICE OBJECTIFS / KPIs</h2>
+                <button class="modal-close" onclick="closeMatrixModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="objectives-kpis-matrix">
+                    <!-- Matrice sera générée dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Timeline -->
+    <div class="modal-overlay" id="modal-timeline" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">TIMELINE MARKETING 2026</h2>
+                <button class="modal-close" onclick="closeTimelineModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="marketing-timeline-container" style="min-height: 600px;">
+                    <!-- Timeline sera générée dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SWOT -->
+    <div class="modal-overlay" id="modal-swot" style="display: none;">
+        <div class="modal-content" style="max-width: 1000px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">ANALYSE SWOT MARKETING</h2>
+                <button class="modal-close" onclick="closeSWOTModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="swot-container">
+                    <!-- Analyse SWOT sera générée dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Analyse des Gaps -->
+    <div class="modal-overlay" id="modal-gaps" style="display: none;">
+        <div class="modal-content" style="max-width: 1000px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">ANALYSE DES GAPS</h2>
+                <button class="modal-close" onclick="closeGapsAnalysisModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="gaps-analysis-container">
+                    <!-- Analyse des gaps sera générée dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Performance par Canal -->
+    <div class="modal-overlay" id="modal-channel-performance" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">PERFORMANCE PAR CANAL</h2>
+                <button class="modal-close" onclick="closeChannelPerformanceModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="channel-performance-container">
+                    <!-- Performance par canal sera générée dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Calendrier Éditorial -->
+    <div class="modal-overlay" id="modal-editorial-calendar" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">CALENDRIER ÉDITORIAL</h2>
+                <button class="modal-close" onclick="closeEditorialCalendarModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="editorial-calendar-container">
+                    <!-- Calendrier éditorial sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/kpis-manager.js"></script>
+    <script src="../assets/js/marketing.js"></script>
+</body>
+</html>
+

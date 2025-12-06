@@ -1,0 +1,751 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - BOOMKŒUR.EXE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="documents-container" style="padding: 40px;">
+            <!-- Page Header -->
+            <div class="documents-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">DOCUMENTS</p>
+                        </div>
+                        <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                            DOCUMENTS <span class="text-[#333] mx-2">//</span> <span class="accent-text">BIBLIOTHÈQUE</span>
+                        </h1>
+                    </div>
+                    <div class="documents-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">DOCUMENTS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">CATÉGORIES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="documents-controls" style="margin-bottom: 32px;">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Rechercher un document..." class="search-input" id="searchInput">
+                </div>
+                <div class="documents-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <span>TOUS</span>
+                    </button>
+                    <button class="filter-btn" data-filter="gouvernance">
+                        <i class="fas fa-sitemap"></i>
+                        <span>GOUVERNANCE</span>
+                    </button>
+                    <button class="filter-btn" data-filter="projets">
+                        <i class="fas fa-folder-open"></i>
+                        <span>PROJETS</span>
+                    </button>
+                    <button class="filter-btn" data-filter="communication">
+                        <i class="fas fa-comments"></i>
+                        <span>COMMUNICATION</span>
+                    </button>
+                    <button class="filter-btn" data-filter="financier">
+                        <i class="fas fa-coins"></i>
+                        <span>FINANCIER</span>
+                    </button>
+                    <button class="filter-btn" data-filter="legal">
+                        <i class="fas fa-gavel"></i>
+                        <span>LÉGAL</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Documents Grid -->
+            <div class="documents-grid">
+                <!-- Category: Gouvernance -->
+                <div class="category-section" data-category="gouvernance">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h2 class="category-title">GOUVERNANCE</h2>
+                        <span class="category-count">5 documents</span>
+                    </div>
+                    <div class="documents-list">
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Charte de gouvernance</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">29/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">2.4 MB</span>
+                                </div>
+                                <p class="document-description">Cadre d'organisation et structure de gouvernance du collectif Boomkœur.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Organigramme Boomkœur</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">29/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.8 MB</span>
+                                </div>
+                                <p class="document-description">Structure organisationnelle avec niveaux de responsabilité et rôles.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="doc">
+                            <div class="document-icon doc">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Fiches de poste</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">29/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">856 KB</span>
+                                </div>
+                                <p class="document-description">Définition détaillée des rôles, responsabilités et pouvoirs de chaque membre.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Règlement intérieur</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">28/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.2 MB</span>
+                                </div>
+                                <p class="document-description">Règles de fonctionnement et principes de base du collectif.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Procès-verbaux réunions</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">29/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Marie</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">3.1 MB</span>
+                                </div>
+                                <p class="document-description">Registre des décisions et comptes-rendus des réunions de structuration.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Projets -->
+                <div class="category-section" data-category="projets">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h2 class="category-title">PROJETS</h2>
+                        <span class="category-count">6 documents</span>
+                    </div>
+                    <div class="documents-list">
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Plan projet Merchandising</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">15/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Benjamin</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">4.2 MB</span>
+                                </div>
+                                <p class="document-description">Stratégie de développement merchandising et planification des produits.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="xls">
+                            <div class="document-icon xls">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Planning événements 2026</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">10/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Hugo</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">512 KB</span>
+                                </div>
+                                <p class="document-description">Calendrier prévisionnel des événements et dates importantes.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Brief créatif événement Printemps</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">05/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Benjamin</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">2.8 MB</span>
+                                </div>
+                                <p class="document-description">Direction artistique et concept scénographique pour l'événement.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="doc">
+                            <div class="document-icon doc">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Checklist production événement</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">01/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Flow</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">324 KB</span>
+                                </div>
+                                <p class="document-description">Liste de contrôle pour la production technique et logistique.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Budget projet Membership</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">20/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Sofiane</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.5 MB</span>
+                                </div>
+                                <p class="document-description">Estimation budgétaire et plan de financement du programme membership.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Rapport d'avancement structuration</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">25/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">2.1 MB</span>
+                                </div>
+                                <p class="document-description">État d'avancement du projet de structuration du collectif.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Communication -->
+                <div class="category-section" data-category="communication">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h2 class="category-title">COMMUNICATION</h2>
+                        <span class="category-count">4 documents</span>
+                    </div>
+                    <div class="documents-list">
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Charte graphique</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">18/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Benjamin</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">8.5 MB</span>
+                                </div>
+                                <p class="document-description">Identité visuelle complète : logos, couleurs, typographies et règles d'usage.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="doc">
+                            <div class="document-icon doc">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Plan éditorial réseaux sociaux</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">12/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Aurélien</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.2 MB</span>
+                                </div>
+                                <p class="document-description">Stratégie de contenu et calendrier éditorial pour les réseaux sociaux.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Guide de communication interne</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">08/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.9 MB</span>
+                                </div>
+                                <p class="document-description">Règles et bonnes pratiques pour la communication au sein du collectif.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Templates visuels</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">03/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Benjamin</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">12.3 MB</span>
+                                </div>
+                                <p class="document-description">Modèles de visuels pour événements, réseaux sociaux et communication.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Financier -->
+                <div class="category-section" data-category="financier">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h2 class="category-title">FINANCIER</h2>
+                        <span class="category-count">5 documents</span>
+                    </div>
+                    <div class="documents-list">
+                        <div class="document-item" data-type="xls">
+                            <div class="document-icon xls">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Budget annuel 2026</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">22/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Sofiane</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">456 KB</span>
+                                </div>
+                                <p class="document-description">Budget prévisionnel pour l'année 2026 avec répartition par postes.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Comptes 2025</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">15/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Sofiane</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">2.3 MB</span>
+                                </div>
+                                <p class="document-description">Bilan financier et comptes de l'exercice 2025.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="xls">
+                            <div class="document-icon xls">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Suivi trésorerie</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">01/12/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Sofiane</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">234 KB</span>
+                                </div>
+                                <p class="document-description">Tableau de suivi des flux de trésorerie et prévisions.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Factures et justificatifs</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">30/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Sofiane</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">5.7 MB</span>
+                                </div>
+                                <p class="document-description">Archives des factures et justificatifs de dépenses.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Rapport financier trimestriel</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">25/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Sofiane</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.8 MB</span>
+                                </div>
+                                <p class="document-description">Analyse financière et rapport de situation trimestriel.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Légal -->
+                <div class="category-section" data-category="legal">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h2 class="category-title">LÉGAL</h2>
+                        <span class="category-count">4 documents</span>
+                    </div>
+                    <div class="documents-list">
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Statuts de l'association</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">10/10/2024</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.1 MB</span>
+                                </div>
+                                <p class="document-description">Statuts officiels de l'association Boomkœur déposés en préfecture.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Contrats partenaires</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">15/11/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Eddie</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">3.2 MB</span>
+                                </div>
+                                <p class="document-description">Archives des contrats de partenariat et conventions signées.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Assurances</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">01/01/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">2.5 MB</span>
+                                </div>
+                                <p class="document-description">Contrats d'assurance et garanties de l'association.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="document-item" data-type="pdf">
+                            <div class="document-icon pdf">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h3 class="document-name">Autorisations et licences</h3>
+                                <div class="document-meta">
+                                    <span class="document-date">20/09/2025</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-author">Matthieu</span>
+                                    <span class="document-separator">•</span>
+                                    <span class="document-size">1.4 MB</span>
+                                </div>
+                                <p class="document-description">Licences d'exploitation, autorisations préfectorales et documents officiels.</p>
+                            </div>
+                            <div class="document-actions">
+                                <a href="#" class="action-btn" title="Télécharger">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="action-btn" title="Voir">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/documents.js"></script>
+</body>
+</html>
+

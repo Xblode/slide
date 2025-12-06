@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerciale - BOOMKŒUR.EXE</title>
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="commercial-container" style="padding: 40px;">
+            <!-- Page Header -->
+            <div class="commercial-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">CRM & COMMERCIAL</p>
+                        </div>
+                        <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                            COMMERCIALE <span class="text-[#333] mx-2">//</span> <span class="accent-text">CRM</span>
+                        </h1>
+                    </div>
+                    <div class="commercial-stats" style="display: flex; align-items: center; gap: 24px;">
+                        <div class="stat-item">
+                            <span class="stat-number" id="contacts-count">0</span>
+                            <span class="stat-label">CONTACTS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="opportunities-count">0</span>
+                            <span class="stat-label">OPPORTUNITÉS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="deals-count">0</span>
+                            <span class="stat-label">DEALS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Commercial -->
+            <div class="commercial-dashboard-section" style="margin-bottom: 40px;">
+                <div class="section-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #FF5500; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                        <i class="fas fa-chart-line" style="color: #FF5500;"></i>
+                    </div>
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 28px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                        DASHBOARD COMMERCIAL
+                    </h2>
+                </div>
+
+                <!-- KPIs Commerciaux -->
+                <div class="commercial-kpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#FF5500';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-handshake" style="color: #FF5500; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">DEALS SIGNÉS</span>
+                        </div>
+                        <div style="font-size: 32px; color: #FF5500; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-deals-signed">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Objectif: 8 deals</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4ade80';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-euro-sign" style="color: #4ade80; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">CA PARTENARIATS</span>
+                        </div>
+                        <div style="font-size: 32px; color: #4ade80; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-revenue-partnerships">0€</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Objectif: 50K€</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#60a5fa';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-building" style="color: #60a5fa; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">NOUVEAUX LIEUX</span>
+                        </div>
+                        <div style="font-size: 32px; color: #60a5fa; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-new-venues">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Objectif: 5 lieux</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#fbbf24';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-tshirt" style="color: #fbbf24; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">CA MERCH</span>
+                        </div>
+                        <div style="font-size: 32px; color: #fbbf24; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-revenue-merch">0€</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Objectif: 25K€</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#8b5cf6';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-chart-line" style="color: #8b5cf6; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">TAUX CONVERSION</span>
+                        </div>
+                        <div style="font-size: 32px; color: #8b5cf6; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-conversion-rate">0%</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Pipeline</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation par onglets -->
+            <div class="commercial-tabs" style="margin-bottom: 30px;">
+                <div style="display: flex; gap: 8px; border-bottom: 2px solid #333;">
+                    <button class="commercial-tab active" data-tab="pipeline" onclick="commercialManager.switchTab('pipeline')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-filter"></i> Pipeline
+                    </button>
+                    <button class="commercial-tab" data-tab="contacts" onclick="commercialManager.switchTab('contacts')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-address-book"></i> Contacts
+                    </button>
+                    <button class="commercial-tab" data-tab="deals" onclick="commercialManager.switchTab('deals')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-handshake"></i> Deals
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pipeline Commercial (Onglet actif par défaut) -->
+            <div id="tab-pipeline" class="commercial-tab-content active">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        PIPELINE COMMERCIAL
+                    </h2>
+                    <button onclick="commercialManager.openNewOpportunityModal()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                        <i class="fas fa-plus"></i> Nouvelle opportunité
+                    </button>
+                </div>
+                <div id="pipeline-kanban" class="pipeline-kanban" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; min-height: 500px;">
+                    <!-- Les colonnes seront générées dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Contacts CRM (Onglet) -->
+            <div id="tab-contacts" class="commercial-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        CRM - CONTACTS
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <input type="text" id="contacts-search" placeholder="Rechercher un contact..." 
+                               style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px; width: 300px;"
+                               onkeyup="commercialManager.searchContacts()">
+                        <button onclick="commercialManager.openNewContactModal()" style="background: #4ade80; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-plus"></i> Nouveau contact
+                        </button>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+                    <button onclick="commercialManager.filterContactsByType('all')" class="filter-btn active" data-filter="all" style="background: #0a0a0a; border: 2px solid #333; padding: 8px 16px; color: white; font-size: 12px; cursor: pointer;">
+                        Tous
+                    </button>
+                    <button onclick="commercialManager.filterContactsByType('sponsor')" class="filter-btn" data-filter="sponsor" style="background: #0a0a0a; border: 2px solid #333; padding: 8px 16px; color: white; font-size: 12px; cursor: pointer;">
+                        Sponsors
+                    </button>
+                    <button onclick="commercialManager.filterContactsByType('lieu')" class="filter-btn" data-filter="lieu" style="background: #0a0a0a; border: 2px solid #333; padding: 8px 16px; color: white; font-size: 12px; cursor: pointer;">
+                        Lieux
+                    </button>
+                    <button onclick="commercialManager.filterContactsByType('fournisseur')" class="filter-btn" data-filter="fournisseur" style="background: #0a0a0a; border: 2px solid #333; padding: 8px 16px; color: white; font-size: 12px; cursor: pointer;">
+                        Fournisseurs
+                    </button>
+                    <button onclick="commercialManager.filterContactsByType('artiste')" class="filter-btn" data-filter="artiste" style="background: #0a0a0a; border: 2px solid #333; padding: 8px 16px; color: white; font-size: 12px; cursor: pointer;">
+                        Artistes
+                    </button>
+                </div>
+                <div id="contacts-list" class="contacts-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+                    <!-- Les contacts seront chargés dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Deals (Onglet) -->
+            <div id="tab-deals" class="commercial-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        DEALS SIGNÉS
+                    </h2>
+                    <button onclick="commercialManager.openNewDealModal()" style="background: #4ade80; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                        <i class="fas fa-plus"></i> Nouveau deal
+                    </button>
+                </div>
+                <div id="deals-list" class="deals-list">
+                    <!-- Les deals seront chargés dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Nouvelle Opportunité -->
+    <div class="modal-overlay" id="modal-new-opportunity" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">NOUVELLE OPPORTUNITÉ</h2>
+                <button class="modal-close" onclick="commercialManager.closeNewOpportunityModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="opportunity-form-container">
+                    <!-- Formulaire sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nouveau Contact -->
+    <div class="modal-overlay" id="modal-new-contact" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">NOUVEAU CONTACT</h2>
+                <button class="modal-close" onclick="commercialManager.closeNewContactModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="contact-form-container">
+                    <!-- Formulaire sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Détail Contact -->
+    <div class="modal-overlay" id="modal-contact-detail" style="display: none;">
+        <div class="modal-content" style="max-width: 1000px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title" id="contact-detail-title">DÉTAIL CONTACT</h2>
+                <button class="modal-close" onclick="commercialManager.closeContactDetailModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="contact-detail-container">
+                    <!-- Détails du contact seront chargés dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Nouveau Deal -->
+    <div class="modal-overlay" id="modal-new-deal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">NOUVEAU DEAL</h2>
+                <button class="modal-close" onclick="commercialManager.closeNewDealModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="deal-form-container">
+                    <!-- Formulaire sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Détail Deal -->
+    <div class="modal-overlay" id="modal-deal-detail" style="display: none;">
+        <div class="modal-content" style="max-width: 1000px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title" id="deal-detail-title">DÉTAIL DEAL</h2>
+                <button class="modal-close" onclick="commercialManager.closeDealDetailModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="deal-detail-container">
+                    <!-- Détails du deal seront chargés dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/commercial.js"></script>
+</body>
+</html>
+

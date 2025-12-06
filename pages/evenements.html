@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - BOOMKŒUR.EXE</title>
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="evenements-container" style="padding: 40px;">
+            <!-- Page Header -->
+            <div class="evenements-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">EVENT MANAGEMENT</p>
+                        </div>
+                        <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                            ÉVÉNEMENTS <span class="text-[#333] mx-2">//</span> <span class="accent-text">GESTION</span>
+                        </h1>
+                    </div>
+                    <div class="evenements-stats" style="display: flex; align-items: center; gap: 24px;">
+                        <div class="stat-item">
+                            <span class="stat-number" id="events-total-count">0</span>
+                            <span class="stat-label">ÉVÉNEMENTS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="events-this-year-count">0</span>
+                            <span class="stat-label">CETTE ANNÉE</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="events-upcoming-count">0</span>
+                            <span class="stat-label">À VENIR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Événements -->
+            <div class="evenements-dashboard-section" style="margin-bottom: 40px;">
+                <div class="section-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #FF5500; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                        <i class="fas fa-chart-line" style="color: #FF5500;"></i>
+                    </div>
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 28px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                        DASHBOARD ÉVÉNEMENTS
+                    </h2>
+                </div>
+
+                <!-- KPIs Événements -->
+                <div class="evenements-kpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#FF5500';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-calendar-check" style="color: #FF5500; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">PROGRESSION OBJECTIF</span>
+                        </div>
+                        <div style="font-size: 32px; color: #FF5500; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-objective-progress">0/15</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Objectif: 15 événements/an</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4ade80';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-calendar-day" style="color: #4ade80; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">PROCHAINS 30 JOURS</span>
+                        </div>
+                        <div style="font-size: 32px; color: #4ade80; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-next-30-days">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Événements à venir</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#60a5fa';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-users" style="color: #60a5fa; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">TAUX REMPLISSAGE MOYEN</span>
+                        </div>
+                        <div style="font-size: 32px; color: #60a5fa; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-avg-fill-rate">0%</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Sur événements terminés</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#fbbf24';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-euro-sign" style="color: #fbbf24; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">CA MOYEN PAR ÉVÉNEMENT</span>
+                        </div>
+                        <div style="font-size: 32px; color: #fbbf24; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-avg-revenue">0€</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Sur événements terminés</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#8b5cf6';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-exclamation-triangle" style="color: #8b5cf6; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">ACTIONS URGENTES</span>
+                        </div>
+                        <div style="font-size: 32px; color: #8b5cf6; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-urgent-actions">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Événements nécessitant action</div>
+                    </div>
+                </div>
+
+                <!-- Prochains Événements -->
+                <div id="upcoming-events-widget" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; border-radius: 4px;">
+                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0 0 16px 0; text-transform: uppercase;">
+                        PROCHAINS ÉVÉNEMENTS
+                    </h3>
+                    <div id="upcoming-events-list">
+                        <!-- Chargé dynamiquement -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation par onglets -->
+            <div class="evenements-tabs" style="margin-bottom: 30px;">
+                <div style="display: flex; gap: 8px; border-bottom: 2px solid #333;">
+                    <button class="evenements-tab active" data-tab="list" onclick="evenementsManager.switchTab('list')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-list"></i> Liste
+                    </button>
+                    <button class="evenements-tab" data-tab="calendar" onclick="evenementsManager.switchTab('calendar')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-calendar-alt"></i> Calendrier
+                    </button>
+                    <button class="evenements-tab" data-tab="kanban" onclick="evenementsManager.switchTab('kanban')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-columns"></i> Kanban
+                    </button>
+                </div>
+            </div>
+
+            <!-- Liste des Événements (Onglet actif par défaut) -->
+            <div id="tab-list" class="evenements-tab-content active">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        LISTE DES ÉVÉNEMENTS
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <input type="text" id="events-search" placeholder="Rechercher un événement..." 
+                               style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px; width: 300px;"
+                               onkeyup="evenementsManager.searchEvents()">
+                        <select id="events-filter-status" onchange="evenementsManager.filterEvents()" style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px;">
+                            <option value="all">Tous les statuts</option>
+                            <option value="idée">💡 Idée</option>
+                            <option value="en préparation">📋 En préparation</option>
+                            <option value="confirmé">✅ Confirmé</option>
+                            <option value="en cours">🚀 En cours</option>
+                            <option value="terminé">✅ Terminé</option>
+                            <option value="annulé">❌ Annulé</option>
+                        </select>
+                        <select id="events-filter-type" onchange="evenementsManager.filterEvents()" style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px;">
+                            <option value="all">Tous les types</option>
+                            <option value="soirée">Soirée</option>
+                            <option value="festival">Festival</option>
+                            <option value="résidence">Résidence</option>
+                            <option value="tournée">Tournée</option>
+                            <option value="spécial">Spécial</option>
+                        </select>
+                        <button onclick="evenementsManager.openNewEventModal()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-plus"></i> Nouvel événement
+                        </button>
+                    </div>
+                </div>
+                <div id="events-list" class="events-list">
+                    <!-- Les événements seront chargés dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Calendrier Événements (Onglet) -->
+            <div id="tab-calendar" class="evenements-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        CALENDRIER ÉVÉNEMENTS
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <button onclick="evenementsManager.previousMonth()" style="background: #0a0a0a; border: 2px solid #333; color: white; padding: 10px 16px; font-size: 12px; cursor: pointer;">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span id="calendar-month-year" style="color: white; font-size: 16px; font-weight: 600; padding: 10px 20px; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
+                            Décembre 2025
+                        </span>
+                        <button onclick="evenementsManager.nextMonth()" style="background: #0a0a0a; border: 2px solid #333; color: white; padding: 10px 16px; font-size: 12px; cursor: pointer;">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button onclick="evenementsManager.todayMonth()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; cursor: pointer; font-weight: 600;">
+                            Aujourd'hui
+                        </button>
+                    </div>
+                </div>
+                <div id="events-calendar" class="events-calendar">
+                    <!-- Le calendrier sera généré dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Kanban Événements (Onglet) -->
+            <div id="tab-kanban" class="evenements-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        KANBAN ÉVÉNEMENTS
+                    </h2>
+                    <button onclick="evenementsManager.openNewEventModal()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                        <i class="fas fa-plus"></i> Nouvel événement
+                    </button>
+                </div>
+                <div id="events-kanban" class="events-kanban" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; min-height: 500px; overflow-x: auto;">
+                    <!-- Les colonnes seront générées dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Nouvel Événement -->
+    <div class="modal-overlay" id="modal-new-event" style="display: none;">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">NOUVEL ÉVÉNEMENT</h2>
+                <button class="modal-close" onclick="evenementsManager.closeNewEventModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="event-form-container">
+                    <!-- Formulaire sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Détail Événement -->
+    <div class="modal-overlay" id="modal-event-detail" style="display: none;">
+        <div class="modal-content" style="max-width: 1400px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title" id="event-detail-title">DÉTAIL ÉVÉNEMENT</h2>
+                <button class="modal-close" onclick="evenementsManager.closeEventDetailModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="event-detail-container">
+                    <!-- Détails de l'événement seront chargés dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/evenements.js"></script>
+</body>
+</html>
+

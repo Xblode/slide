@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membres & Rôles - BOOMKŒUR.EXE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="page-container" style="padding: 40px;">
+            <div class="page-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center mb-2">
+                    <span class="w-3 h-3 accent-bg mr-3"></span>
+                    <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">MEMBRES & RÔLES</p>
+                </div>
+                <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                    MEMBRES <span class="text-[#333] mx-2">//</span> <span class="accent-text">RÔLES</span>
+                </h1>
+            </div>
+            
+            <div class="page-body">
+                <!-- Liste des membres -->
+                <div class="members-container">
+                    <!-- Matthieu -->
+                    <div class="member-card clickable" data-member="matthieu">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-hat-cowboy"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">MATTHIEU</h2>
+                                <p class="member-roles">Président</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-1">NIVEAU 1</span>
+                        </div>
+                    </div>
+
+                    <!-- Benjamin -->
+                    <div class="member-card clickable highlighted" data-member="benjamin">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">BENJAMIN</h2>
+                                <p class="member-roles">Directeur Artistique • Directeur Stratégique • Directeur Marketing</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-1">NIVEAU 1</span>
+                        </div>
+                    </div>
+
+                    <!-- Hugo / Milan -->
+                    <div class="member-card clickable" data-member="hugo-milan">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">HUGO / MILAN</h2>
+                                <p class="member-roles">Gestionnaire Projets • Directeur Stratégie</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-1">NIVEAU 1</span>
+                        </div>
+                    </div>
+
+                    <!-- Sofiane -->
+                    <div class="member-card clickable" data-member="sofiane">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">SOFIANE</h2>
+                                <p class="member-roles">Trésorier</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-1">NIVEAU 1</span>
+                        </div>
+                    </div>
+
+                    <!-- Marie -->
+                    <div class="member-card clickable" data-member="marie">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-folder-open"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">MARIE</h2>
+                                <p class="member-roles">Secrétaire</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-2">NIVEAU 2</span>
+                        </div>
+                    </div>
+
+                    <!-- Moumou -->
+                    <div class="member-card clickable" data-member="moumou">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">MOUMOU</h2>
+                                <p class="member-roles">RH / Bénévoles</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-2">NIVEAU 2</span>
+                        </div>
+                    </div>
+
+                    <!-- Eddie -->
+                    <div class="member-card clickable" data-member="eddie">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">EDDIE</h2>
+                                <p class="member-roles">Commercial</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-2">NIVEAU 2</span>
+                        </div>
+                    </div>
+
+                    <!-- Flow -->
+                    <div class="member-card clickable" data-member="flow">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">FLOW</h2>
+                                <p class="member-roles">Technique • Manager Artistique</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-2">NIVEAU 2</span>
+                        </div>
+                    </div>
+
+                    <!-- Blondy -->
+                    <div class="member-card clickable" data-member="blondy">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">BLONDY</h2>
+                                <p class="member-roles">Storytelling / CM</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-3">NIVEAU 3</span>
+                        </div>
+                    </div>
+
+                    <!-- Teams -->
+                    <div class="member-card clickable" data-member="team-crea">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">TEAM CRÉA</h2>
+                                <p class="member-roles">Graphistes</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-3">NIVEAU 3</span>
+                        </div>
+                    </div>
+
+                    <div class="member-card clickable" data-member="team-media">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">TEAM MÉDIA</h2>
+                                <p class="member-roles">Média / Vidéo</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-3">NIVEAU 3</span>
+                        </div>
+                    </div>
+
+                    <div class="member-card clickable" data-member="residents">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">RÉSIDENTS</h2>
+                                <p class="member-roles">DJs & Artistes</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-4">NIVEAU 4</span>
+                        </div>
+                    </div>
+
+                    <div class="member-card clickable" data-member="team-terrain">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-people-carry"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">TEAM TERRAIN</h2>
+                                <p class="member-roles">Bénévoles</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-4">NIVEAU 4</span>
+                        </div>
+                    </div>
+
+                    <div class="member-card clickable" data-member="team-montage">
+                        <div class="member-header">
+                            <div class="member-avatar">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="member-info">
+                                <h2 class="member-name">TEAM MONTAGE</h2>
+                                <p class="member-roles">Techniciens</p>
+                            </div>
+                        </div>
+                        <div class="member-level">
+                            <span class="level-tag level-4">NIVEAU 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal pour les détails du membre -->
+            <div id="memberModal" class="role-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" id="closeMemberModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-header">
+                        <div class="modal-icon" id="memberModalIcon"></div>
+                        <h2 class="modal-title" id="memberModalTitle"></h2>
+                        <p class="modal-person" id="memberModalRoles"></p>
+                    </div>
+                    <div class="modal-body" id="memberModalBody">
+                        <!-- Les fiches de rôle seront injectées ici par JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/membres.js"></script>
+</body>
+</html>
+

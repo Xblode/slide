@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication - BOOMKŒUR.EXE</title>
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="communication-container" style="padding: 40px;">
+            <!-- Page Header -->
+            <div class="communication-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">CONTENT HUB</p>
+                        </div>
+                        <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                            COMMUNICATION <span class="text-[#333] mx-2">//</span> <span class="accent-text">CONTENU</span>
+                        </h1>
+                    </div>
+                    <div class="communication-stats" style="display: flex; align-items: center; gap: 24px;">
+                        <div class="stat-item">
+                            <span class="stat-number" id="contents-total-count">0</span>
+                            <span class="stat-label">CONTENUS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="contents-published-count">0</span>
+                            <span class="stat-label">PUBLIÉS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="contents-planned-count">0</span>
+                            <span class="stat-label">PLANIFIÉS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Communication -->
+            <div class="communication-dashboard-section" style="margin-bottom: 40px;">
+                <div class="section-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #FF5500; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                        <i class="fas fa-chart-line" style="color: #FF5500;"></i>
+                    </div>
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 28px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 2px;">
+                        DASHBOARD COMMUNICATION
+                    </h2>
+                </div>
+
+                <!-- KPIs Communication -->
+                <div class="communication-kpis" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#FF5500';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-calendar-check" style="color: #FF5500; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">À PUBLIER AUJOURD'HUI</span>
+                        </div>
+                        <div style="font-size: 32px; color: #FF5500; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-today-publish">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Contenus programmés</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4ade80';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-heart" style="color: #4ade80; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">ENGAGEMENT MOYEN</span>
+                        </div>
+                        <div style="font-size: 32px; color: #4ade80; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-avg-engagement">4.8%</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Objectif: 6%</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#60a5fa';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-eye" style="color: #60a5fa; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">PORTÉE MOYENNE</span>
+                        </div>
+                        <div style="font-size: 32px; color: #60a5fa; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-avg-reach">45K</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Par publication</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#fbbf24';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-clock" style="color: #fbbf24; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">EN ATTENTE VALIDATION</span>
+                        </div>
+                        <div style="font-size: 32px; color: #fbbf24; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-pending-validation">0</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">Contenus à valider</div>
+                    </div>
+
+                    <div class="kpi-card" style="background: #0a0a0a; border: 2px solid #333; padding: 20px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#8b5cf6';" onmouseout="this.style.borderColor='#333';">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <i class="fas fa-chart-pie" style="color: #8b5cf6; font-size: 18px;"></i>
+                            <span style="font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px;">PROGRESSION OBJECTIF</span>
+                        </div>
+                        <div style="font-size: 32px; color: #8b5cf6; font-weight: 700; font-family: 'Oswald', sans-serif;" id="kpi-objective-progress">0%</div>
+                        <div style="font-size: 12px; color: #666; margin-top: 4px;">500 contenus/an</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation par onglets -->
+            <div class="communication-tabs" style="margin-bottom: 30px;">
+                <div style="display: flex; gap: 8px; border-bottom: 2px solid #333;">
+                    <button class="communication-tab active" data-tab="list" onclick="communicationManager.switchTab('list')" style="background: transparent; border: none; padding: 12px 24px; color: #FF5500; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid #FF5500; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-list"></i> Liste
+                    </button>
+                    <button class="communication-tab" data-tab="kanban" onclick="communicationManager.switchTab('kanban')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-columns"></i> Contenus
+                    </button>
+                    <button class="communication-tab" data-tab="calendar" onclick="communicationManager.switchTab('calendar')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-calendar-alt"></i> Calendrier
+                    </button>
+                    <button class="communication-tab" data-tab="history" onclick="communicationManager.switchTab('history')" style="background: transparent; border: none; padding: 12px 24px; color: #999; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.3s ease;">
+                        <i class="fas fa-history"></i> Historique
+                    </button>
+                </div>
+            </div>
+
+            <!-- Vue Liste des Contenus (Onglet actif par défaut) -->
+            <div id="tab-list" class="communication-tab-content active">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        LISTE DES CONTENUS
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <input type="text" id="contents-list-search" placeholder="Rechercher un contenu..." 
+                               style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px; width: 300px;"
+                               onkeyup="communicationManager.searchContentsList()">
+                        <select id="contents-list-filter-status" onchange="communicationManager.filterContentsList()" style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px;">
+                            <option value="idée" selected>💡 Idée</option>
+                            <option value="écriture">✍️ Écriture</option>
+                            <option value="design">🎨 Design</option>
+                            <option value="révision">📝 Révision</option>
+                            <option value="prêt">✅ Prêt</option>
+                            <option value="planifié">📅 Planifié</option>
+                            <option value="publié">🚀 Publié</option>
+                            <option value="analyse">📊 Analyse</option>
+                            <option value="all">Tous les statuts</option>
+                        </select>
+                        <button onclick="communicationManager.openNewContentModal()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-plus"></i> Nouveau contenu
+                        </button>
+                    </div>
+                </div>
+                <div id="contents-list" class="contents-list">
+                    <!-- Les contenus seront chargés dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Tableau Kanban des Contenus (Onglet) -->
+            <div id="tab-kanban" class="communication-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        TABLEAU DE CONTENUS
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <input type="text" id="contents-search" placeholder="Rechercher un contenu..." 
+                               style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px; width: 300px;"
+                               onkeyup="communicationManager.searchContents()">
+                        <button onclick="communicationManager.openNewContentModal()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-weight: 600;">
+                            <i class="fas fa-plus"></i> Nouveau contenu
+                        </button>
+                    </div>
+                </div>
+                <div id="contents-kanban" class="contents-kanban" style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 12px; min-height: 500px; overflow-x: auto;">
+                    <!-- Les colonnes seront générées dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Calendrier Éditorial (Onglet) -->
+            <div id="tab-calendar" class="communication-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        CALENDRIER ÉDITORIAL
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <button onclick="communicationManager.previousMonth()" style="background: #0a0a0a; border: 2px solid #333; color: white; padding: 10px 16px; font-size: 12px; cursor: pointer;">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span id="calendar-month-year" style="color: white; font-size: 16px; font-weight: 600; padding: 10px 20px; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
+                            Décembre 2025
+                        </span>
+                        <button onclick="communicationManager.nextMonth()" style="background: #0a0a0a; border: 2px solid #333; color: white; padding: 10px 16px; font-size: 12px; cursor: pointer;">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button onclick="communicationManager.todayMonth()" style="background: #FF5500; color: white; border: none; padding: 10px 20px; font-size: 12px; text-transform: uppercase; cursor: pointer; font-weight: 600;">
+                            Aujourd'hui
+                        </button>
+                    </div>
+                </div>
+                <div id="editorial-calendar" class="editorial-calendar">
+                    <!-- Le calendrier sera généré dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Historique des Contenus Publiés (Onglet) -->
+            <div id="tab-history" class="communication-tab-content" style="display: none;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Oswald', sans-serif; font-size: 24px; color: white; margin: 0; text-transform: uppercase;">
+                        HISTORIQUE DES CONTENUS PUBLIÉS
+                    </h2>
+                    <div style="display: flex; gap: 12px;">
+                        <select id="history-filter-channel" onchange="communicationManager.filterHistory()" style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px;">
+                            <option value="all">Tous les canaux</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="facebook">Facebook</option>
+                        </select>
+                        <select id="history-filter-type" onchange="communicationManager.filterHistory()" style="background: #0a0a0a; border: 2px solid #333; padding: 10px 16px; color: white; font-size: 13px;">
+                            <option value="all">Tous les types</option>
+                            <option value="post">Post</option>
+                            <option value="story">Story</option>
+                            <option value="reel">Reel</option>
+                            <option value="tiktok">TikTok</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="contents-history" class="contents-history">
+                    <!-- L'historique sera chargé dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Nouveau Contenu -->
+    <div class="modal-overlay" id="modal-new-content" style="display: none;">
+        <div class="modal-content" style="max-width: 900px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title">NOUVEAU CONTENU</h2>
+                <button class="modal-close" onclick="communicationManager.closeNewContentModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="content-form-container">
+                    <!-- Formulaire sera généré dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Détail Contenu -->
+    <div class="modal-overlay" id="modal-content-detail" style="display: none;">
+        <div class="modal-content" style="max-width: 1000px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2 class="modal-title" id="content-detail-title">DÉTAIL CONTENU</h2>
+                <button class="modal-close" onclick="communicationManager.closeContentDetailModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="content-detail-container">
+                    <!-- Détails du contenu seront chargés dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/communication.js"></script>
+</body>
+</html>

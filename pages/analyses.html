@@ -1,0 +1,648 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyses - BOOMKŒUR.EXE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="page-container" style="padding: 40px;">
+            <div class="page-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center mb-2">
+                    <span class="w-3 h-3 accent-bg mr-3"></span>
+                    <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">ANALYSES</p>
+                </div>
+                <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                    ANALYSES <span class="text-[#333] mx-2">//</span> <span class="accent-text">ÉTUDES</span>
+                </h1>
+            </div>
+            
+            <div class="page-body">
+                <!-- Introduction -->
+                <div class="analyses-intro" style="margin-bottom: 48px; padding: 32px; background: #0a0a0a; border: 2px solid #333;">
+                    <p class="font-['Inter'] text-gray-300 text-lg leading-relaxed" style="margin: 0;">
+                        Cette étude psycho-sociologique a été réalisée pour comprendre les biais et dynamiques de notre collectif. 
+                        L'objectif est de comprendre le système global pour l'améliorer, pas d'accuser des individus.
+                    </p>
+                </div>
+
+                <!-- Section 1: Dynamiques du Collectif -->
+                <div class="analysis-section" style="margin-bottom: 64px;">
+                    <div class="section-header" style="margin-bottom: 32px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">ÉTUDE PSYCHO-SOCIOLOGIQUE</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            DYNAMIQUES DU <span class="accent-text">COLLECTIF</span>
+                        </h2>
+                    </div>
+
+                    <div class="dynamics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                        <div class="dynamics-card">
+                            <div class="dynamics-icon">
+                                <i class="fas fa-wave-square"></i>
+                            </div>
+                            <h3 class="dynamics-title">PHASES NATURELLES</h3>
+                            <p class="dynamics-desc">Tous les groupes traversent inévitablement des phases de tensions et de restructuration.</p>
+                        </div>
+
+                        <div class="dynamics-card">
+                            <div class="dynamics-icon">
+                                <i class="fas fa-user-tag"></i>
+                            </div>
+                            <h3 class="dynamics-title">RÔLES INFORMELS</h3>
+                            <p class="dynamics-desc">Au-delà des titres, des rôles émergent spontanément : leader, médiateur, opposant, etc.</p>
+                        </div>
+
+                        <div class="dynamics-card">
+                            <div class="dynamics-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="dynamics-title">BIAIS COGNITIFS</h3>
+                            <p class="dynamics-desc">Des biais personnels (ego, fatigue) et collectifs (clans, non-dits) influencent nos décisions.</p>
+                        </div>
+
+                        <div class="dynamics-card">
+                            <div class="dynamics-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="dynamics-title">OBJECTIF SYSTÉMIQUE</h3>
+                            <p class="dynamics-desc">L'objectif est de comprendre le système global pour l'améliorer, pas d'accuser des individus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Biais Identifiés -->
+                <div class="analysis-section" style="margin-bottom: 64px; padding-top: 48px; border-top: 2px solid #333;">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">ÉTUDE PSYCHO-SOCIOLOGIQUE</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            BIAIS IDENTIFIÉS <span class="text-[#333] mx-2">//</span> <span class="accent-text">ANALYSE COMPLÈTE</span>
+                        </h2>
+                        <p class="font-['Inter'] text-gray-400 text-sm mt-4" style="max-width: 800px;">
+                            Cliquez sur chaque carte pour découvrir les détails, symptômes et solutions associés à chaque biais.
+                        </p>
+                    </div>
+
+                    <div class="biases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 32px;">
+                        <!-- Bias 1 -->
+                        <div class="bias-card-detailed" data-bias="social-loafing" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">01</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-couch"></i>
+                                    <h4 class="bias-title">PARESSE SOCIALE</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">SOCIAL LOAFING</p>
+                            <p class="bias-description">Plus le groupe est large, moins chacun se sent responsable individuellement. L'effort diminue quand la contribution n'est pas mesurée.</p>
+                            <span class="bias-type">TYPE: COLLECTIF</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 2 -->
+                        <div class="bias-card-detailed" data-bias="statu-quo" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">02</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-anchor"></i>
+                                    <h4 class="bias-title">BIAIS DU STATU QUO</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">RÉSISTANCE AU CHANGEMENT</p>
+                            <p class="bias-description">On préfère garder une organisation dysfonctionnelle connue plutôt que de prendre le risque d'en tester une nouvelle.</p>
+                            <span class="bias-type">TYPE: COGNITIF</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 3 -->
+                        <div class="bias-card-detailed" data-bias="groupthink" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">03</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-users"></i>
+                                    <h4 class="bias-title">GROUPTHINK</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">PENSÉE DE GROUPE</p>
+                            <p class="bias-description">Le groupe cherche l'harmonie au détriment de la réflexion critique. Les désaccords sont tus pour "ne pas faire d'histoires".</p>
+                            <span class="bias-type">TYPE: DYNAMIQUE</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 4 -->
+                        <div class="bias-card-detailed" data-bias="conformity" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">04</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-copy"></i>
+                                    <h4 class="bias-title">EFFET DE CONFORMITÉ</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">ASCH EFFECT</p>
+                            <p class="bias-description">Les individus alignent leur opinion sur celle de la majorité apparente, même si elle contredit leur propre jugement.</p>
+                            <span class="bias-type">TYPE: SOCIAL</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 5 -->
+                        <div class="bias-card-detailed" data-bias="hidden-profile" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">05</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-eye-slash"></i>
+                                    <h4 class="bias-title">HIDDEN PROFILE EFFECT</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">INFORMATION CACHÉE</p>
+                            <p class="bias-description">Le groupe néglige les informations détenues par un expert minoritaire au profit du "ressenti collectif". L'expertise technique est étouffée.</p>
+                            <span class="bias-type">TYPE: DYNAMIQUE</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 6 -->
+                        <div class="bias-card-detailed" data-bias="cognitive-dissonance" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">06</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-brain"></i>
+                                    <h4 class="bias-title">DISSONANCE COGNITIVE</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">JUSTIFICATION</p>
+                            <p class="bias-description">Quand on agit contre ses valeurs ou l'efficacité (retards, oublis), on se justifie ("pas le temps") plutôt que de se remettre en question.</p>
+                            <span class="bias-type">TYPE: COGNITIF</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 7 -->
+                        <div class="bias-card-detailed" data-bias="conflict-avoidance" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">07</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-handshake-slash"></i>
+                                    <h4 class="bias-title">ÉVITEMENT DU CONFLIT</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">CONFLICT AVOIDANCE</p>
+                            <p class="bias-description">Par peur de la tension immédiate, les membres évitent le désaccord sain, accumulant les frustrations jusqu'à l'explosion inévitable.</p>
+                            <span class="bias-type">TYPE: ÉMOTIONNEL</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 8 -->
+                        <div class="bias-card-detailed" data-bias="task-significance" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">08</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-tasks"></i>
+                                    <h4 class="bias-title">PERCEPTION D'UTILITÉ</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">TASK SIGNIFICANCE</p>
+                            <p class="bias-description">Les individus s'engagent moins dans une tâche dont ils ne perçoivent pas l'importance immédiate ou la visibilité pour le groupe.</p>
+                            <span class="bias-type">TYPE: MOTIVATION</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 9 -->
+                        <div class="bias-card-detailed bias-card-leadership" data-bias="over-commitment" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">09</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-fire"></i>
+                                    <h4 class="bias-title">SUR-ENGAGEMENT</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">EFFORT JUSTIFICATION</p>
+                            <p class="bias-description">Plus on s'investit personnellement, plus on devient intolérant à la moindre négligence perçue chez les autres. L'écart d'implication crée de la frustration.</p>
+                            <div class="bias-risk">
+                                <p>RISQUE : ÉPUISEMENT / CONFLIT</p>
+                            </div>
+                            <span class="bias-type">TYPE: LEADERSHIP</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 10 -->
+                        <div class="bias-card-detailed bias-card-leadership" data-bias="perfectionism" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">10</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h4 class="bias-title">GARDIEN QUALITÉ</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">PERFECTIONNISME NORMATIF</p>
+                            <p class="bias-description">Les leaders perfectionnistes vivent les compromis comme une trahison du projet. La vision idéale empêche parfois l'avancement concret.</p>
+                            <div class="bias-risk">
+                                <p>RISQUE : BLOCAGE / RIGIDITÉ</p>
+                            </div>
+                            <span class="bias-type">TYPE: LEADERSHIP</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 11 -->
+                        <div class="bias-card-detailed bias-card-leadership" data-bias="frustrated-leadership" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">11</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-bomb"></i>
+                                    <h4 class="bias-title">LEADERSHIP FRUSTRÉ</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">CONTROL ILLUSION</p>
+                            <p class="bias-description">Quand un leader sent que son cadre n'est pas respecté, il sur-compense par le contrôle excessif ou la colère, ce qui braque le groupe.</p>
+                            <div class="bias-risk">
+                                <p>RISQUE : RUPTURE DE CONFIANCE</p>
+                            </div>
+                            <span class="bias-type">TYPE: LEADERSHIP</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 12 -->
+                        <div class="bias-card-detailed" data-bias="selective-memory" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">12</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-memory"></i>
+                                    <h4 class="bias-title">MÉMOIRE SÉLECTIVE</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">RECONSTRUCTION COGNITIVE</p>
+                            <p class="bias-description">Chaque membre retient ce qui l'arrange. Sans trace écrite, la mémoire collective devient une somme de souvenirs individuels déformés.</p>
+                            <span class="bias-type">TYPE: COGNITIF</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 13 -->
+                        <div class="bias-card-detailed" data-bias="presentism" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">13</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-clock"></i>
+                                    <h4 class="bias-title">PRÉSENTISME</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">BIAIS TEMPOREL</p>
+                            <p class="bias-description">On accorde plus d'importance à l'urgence du moment qu'aux décisions planifiées. Les résolutions précédentes s'effacent devant les nouvelles urgences.</p>
+                            <span class="bias-type">TYPE: TEMPOREL</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 14 -->
+                        <div class="bias-card-detailed" data-bias="false-agreement" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">14</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-handshake"></i>
+                                    <h4 class="bias-title">FAUX ACCORD</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">CONSENSUS ILLUSOIRE</p>
+                            <p class="bias-description">On confond l'absence de contradiction avec un consensus réel. Le silence est perçu comme un "oui", alors qu'il signifie désintérêt ou malaise.</p>
+                            <span class="bias-type">TYPE: DYNAMIQUE</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Bias 15 -->
+                        <div class="bias-card-detailed" data-bias="coordination-illusion" style="cursor: pointer; transition: all 0.3s ease;">
+                            <div class="bias-card-header">
+                                <span class="bias-number">15</span>
+                                <div class="bias-title-section">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <h4 class="bias-title">ILLUSION DE COORDINATION</h4>
+                                </div>
+                            </div>
+                            <p class="bias-subtitle">DILUTION RESPONSABILITÉ</p>
+                            <p class="bias-description">Les membres croient que les autres ont compris et vont faire leur part, sans vérification réelle. Chacun pense que quelqu'un d'autre s'en occupe.</p>
+                            <span class="bias-type">TYPE: ORGANISATIONNEL</span>
+                            <div style="margin-top: 12px; text-align: center;">
+                                <span style="font-size: 11px; color: #FF5500; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="fas fa-info-circle"></i> Cliquez pour plus de détails
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Container -->
+                <div id="biasModal" class="bias-modal">
+                    <div class="bias-modal-content">
+                        <button class="bias-modal-close" onclick="closeBiasModal()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="bias-modal-body" id="biasModalBody">
+                            <!-- Content will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Cas Pratique -->
+                <div class="analysis-section" style="margin-bottom: 64px; padding-top: 48px; border-top: 2px solid #333;">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">ÉTUDE DE CAS // DIAGNOSTIC</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            CAS PRATIQUE <span class="text-[#333] mx-2">//</span> <span class="accent-text">LE MESSAGE OUBLIÉ</span>
+                        </h2>
+                    </div>
+
+                    <div class="case-study-container" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+                        <!-- Situation -->
+                        <div class="case-block-page">
+                            <div class="case-block-header">
+                                <span class="case-number">01</span>
+                                <h3 class="case-title">LA SITUATION</h3>
+                            </div>
+                            <div class="case-content">
+                                <i class="fas fa-comment-slash case-icon"></i>
+                                <p class="case-main-text">Une idée est proposée.</p>
+                                <p class="case-desc">Les réactions sont dispersées ou inexistantes. Quelques likes, pas de vraie réponse. L'idée finit par disparaître dans le flux de conversation sans jamais être traitée.</p>
+                                <div class="case-result">
+                                    <p>RÉSULTAT : PERTE D'INITIATIVE</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Biais en jeu -->
+                        <div class="case-block-page">
+                            <div class="case-block-header">
+                                <span class="case-number">02</span>
+                                <h3 class="case-title">BIAIS EN JEU</h3>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-biases">
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">GROUPTHINK</span>
+                                        <p>Personne n'ose rompre le silence ou critiquer.</p>
+                                    </div>
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">CONFORMITÉ</span>
+                                        <p>Le silence des autres est interprété comme un désaccord.</p>
+                                    </div>
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">STATU QUO</span>
+                                        <p>Plus facile de ne rien faire que de réagir.</p>
+                                    </div>
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">DILUTION RESPONSABILITÉ</span>
+                                        <p>"Quelqu'un d'autre va sûrement répondre."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solution -->
+                        <div class="case-block-page case-block-solution">
+                            <div class="case-block-header">
+                                <span class="case-number"><i class="fas fa-check"></i></span>
+                                <h3 class="case-title">LA SOLUTION</h3>
+                            </div>
+                            <div class="case-content">
+                                <i class="fas fa-lightbulb case-icon"></i>
+                                <p class="case-main-text">Identifier un décideur clair</p>
+                                <p class="case-desc">Chaque proposition doit avoir un responsable identifié qui valide, refuse ou demande des précisions. Pas de décision collective floue.</p>
+                                <div class="case-result case-result-success">
+                                    <p>RÉSULTAT : CLARTÉ & ACTION</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Deuxième Cas Pratique -->
+                <div class="analysis-section" style="margin-bottom: 64px; padding-top: 48px; border-top: 2px solid #333;">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">ÉTUDE DE CAS // DIAGNOSTIC</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            CAS PRATIQUE <span class="text-[#333] mx-2">//</span> <span class="accent-text">ON EN AVAIT PARLÉ POURTANT...</span>
+                        </h2>
+                    </div>
+
+                    <div class="case-study-container" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+                        <!-- Situation -->
+                        <div class="case-block-page">
+                            <div class="case-block-header">
+                                <span class="case-number">01</span>
+                                <h3 class="case-title">LA SITUATION</h3>
+                            </div>
+                            <div class="case-content">
+                                <i class="fas fa-comments case-icon"></i>
+                                <p class="case-main-text">Une décision semble prise en réunion.</p>
+                                <p class="case-desc">Mais personne ne note, ne formalise, ni ne vérifie. Quelques jours plus tard, certains pensent que c'est fait, d'autres que ce n'est pas validé. Le sujet revient en boucle.</p>
+                                <div class="case-result">
+                                    <p>RÉSULTAT : BROUILLARD DÉCISIONNEL</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Biais en jeu -->
+                        <div class="case-block-page">
+                            <div class="case-block-header">
+                                <span class="case-number">02</span>
+                                <h3 class="case-title">BIAIS EN JEU</h3>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-biases">
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">MÉMOIRE SÉLECTIVE</span>
+                                        <p>Chacun retient ce qui l'arrange.</p>
+                                    </div>
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">PRÉSENTISME</span>
+                                        <p>L'urgence du moment efface les décisions précédentes.</p>
+                                    </div>
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">FAUX ACCORD</span>
+                                        <p>Le silence est perçu comme validation.</p>
+                                    </div>
+                                    <div class="case-bias-item">
+                                        <span class="case-bias-tag">ILLUSION COORDINATION</span>
+                                        <p>"Quelqu'un d'autre va sûrement s'en occuper."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solution -->
+                        <div class="case-block-page case-block-solution">
+                            <div class="case-block-header">
+                                <span class="case-number"><i class="fas fa-check"></i></span>
+                                <h3 class="case-title">LA SOLUTION</h3>
+                            </div>
+                            <div class="case-content">
+                                <i class="fas fa-clipboard-check case-icon"></i>
+                                <p class="case-main-text">Registre des décisions</p>
+                                <p class="case-desc">Créer un "Decision Log" : Date / Sujet / Décision / Responsable / Statut. Un scribe note en 2 minutes après chaque réunion. Plus de débat évité, mémoire collective claire.</p>
+                                <div class="case-result case-result-success">
+                                    <p>RÉSULTAT : TRAÇABILITÉ & CONTINUITÉ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Théories de Référence -->
+                <div class="analysis-section" style="margin-bottom: 64px; padding-top: 48px; border-top: 2px solid #333;">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <div class="flex items-center mb-2">
+                            <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">FONDEMENTS THÉORIQUES</p>
+                        </div>
+                        <h2 class="font-['Oswald'] text-4xl font-bold uppercase text-white leading-none mt-2">
+                            THÉORIES <span class="text-[#333] mx-2">//</span> <span class="accent-text">RÉFÉRENCES</span>
+                        </h2>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+                        <!-- Théorie 1 -->
+                        <div style="padding: 24px; background: #0a0a0a; border: 2px solid #333;">
+                            <div style="margin-bottom: 16px;">
+                                <h3 class="font-['Oswald'] text-xl font-bold uppercase text-[#FF5500] mb-2">
+                                    ARTISTES-VIE VS ARTISTES-PROJETS
+                                </h3>
+                                <p class="font-['Space_Mono'] text-xs text-gray-500 uppercase tracking-wider">Raunig, 2013</p>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-300 leading-relaxed">
+                                Deux approches des collectifs artistiques : ceux qui cherchent l'expression libre individuelle, et ceux qui perçoivent le collectif comme une entité artistique nécessitant structure et direction.
+                            </p>
+                        </div>
+
+                        <!-- Théorie 2 -->
+                        <div style="padding: 24px; background: #0a0a0a; border: 2px solid #333;">
+                            <div style="margin-bottom: 16px;">
+                                <h3 class="font-['Oswald'] text-xl font-bold uppercase text-[#FF5500] mb-2">
+                                    THÉORIE DE LA STRUCTURATION
+                                </h3>
+                                <p class="font-['Space_Mono'] text-xs text-gray-500 uppercase tracking-wider">Anthony Giddens, 1984</p>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-300 leading-relaxed">
+                                Un groupe ne devient durable que lorsqu'il crée des règles et des ressources partagées. Les structures ne sont pas des freins à la liberté : elles la rendent possible à long terme.
+                            </p>
+                        </div>
+
+                        <!-- Théorie 3 -->
+                        <div style="padding: 24px; background: #0a0a0a; border: 2px solid #333;">
+                            <div style="margin-bottom: 16px;">
+                                <h3 class="font-['Oswald'] text-xl font-bold uppercase text-[#FF5500] mb-2">
+                                    ÉTUDE INJEP 2021
+                                </h3>
+                                <p class="font-['Space_Mono'] text-xs text-gray-500 uppercase tracking-wider">Associations Culturelles</p>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-300 leading-relaxed">
+                                Les associations artistiques jeunes survivent au-delà de 3 ans uniquement si elles mettent en place une gouvernance claire, définissent une identité cohérente et professionnalisent partiellement leur fonctionnement.
+                            </p>
+                        </div>
+
+                        <!-- Théorie 4 -->
+                        <div style="padding: 24px; background: #0a0a0a; border: 2px solid #333;">
+                            <div style="margin-bottom: 16px;">
+                                <h3 class="font-['Oswald'] text-xl font-bold uppercase text-[#FF5500] mb-2">
+                                    PARADOXE DE LA LIBERTÉ
+                                </h3>
+                                <p class="font-['Space_Mono'] text-xs text-gray-500 uppercase tracking-wider">Erich Fromm, 1941</p>
+                            </div>
+                            <p class="font-['Inter'] text-sm text-gray-300 leading-relaxed">
+                                Trop de liberté sans cadre crée de l'anxiété, pas de créativité. Les membres d'un groupe "libre" se retrouvent sans repères et compensent cette insécurité par la passivité ou la critique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6: Citation de conclusion -->
+                <div class="analysis-section" style="margin-bottom: 32px; padding: 40px; background: rgba(255, 85, 0, 0.05); border: 2px solid #FF5500; border-left-width: 8px;">
+                    <p class="font-['Inter'] text-xl text-gray-200 leading-relaxed text-center italic">
+                        "Boomkœur.exe doit apprendre à gérer comme une équipe, sans cesser de rêver comme un collectif."
+                    </p>
+                    <p class="font-['Space_Mono'] text-xs text-gray-500 uppercase tracking-widest text-center mt-6">
+                        LE PROBLÈME N'EST PAS LA VOLONTÉ, C'EST LA MÉTHODE
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/bias-modal.js"></script>
+</body>
+</html>
+

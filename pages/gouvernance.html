@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gouvernance - BOOMKŒUR.EXE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="page-container" style="padding: 40px;">
+            <div class="page-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center mb-2">
+                    <span class="w-3 h-3 accent-bg mr-3"></span>
+                    <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">GOUVERNANCE</p>
+                </div>
+                <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                    GOUVERNANCE <span class="text-[#333] mx-2">//</span> <span class="accent-text">STRUCTURE</span>
+                </h1>
+            </div>
+            
+            <div class="page-body">
+                <!-- Organigramme avec lignes de connexion -->
+                <div class="org-chart-container">
+                    <!-- Président isolé en haut -->
+                    <div class="president-section">
+                        <div class="president-card highlighted clickable" data-role="president">
+                            <div class="role-icon"><i class="fas fa-hat-cowboy"></i></div>
+                            <div class="role-info">
+                                <span class="role-name">Président</span>
+                                <span class="role-person">Matthieu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flèches depuis le Président vers le Niveau 1 -->
+                    <div class="connection-branch president-to-level1">
+                        <div class="connection-line-vertical"></div>
+                        <div class="connection-line-horizontal"></div>
+                        <!-- Flèches individuelles vers chaque membre du niveau 1 -->
+                        <div class="individual-arrows">
+                            <div class="arrow-to-card" style="left: 10%;"></div>
+                            <div class="arrow-to-card" style="left: 30%;"></div>
+                            <div class="arrow-to-card" style="left: 50%;"></div>
+                            <div class="arrow-to-card" style="left: 70%;"></div>
+                            <div class="arrow-to-card" style="left: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Level 1: VISION & GOUVERNANCE (sans Président) -->
+                    <div class="org-level level-1">
+                        <div class="level-header-section">
+                            <span class="level-badge">NIVEAU 1</span>
+                            <h3 class="level-title">VISION &amp; GOUVERNANCE</h3>
+                        </div>
+                        <div class="roles-grid">
+                            <div class="role-card highlighted clickable" data-role="directeur-artistique">
+                                <div class="role-icon"><i class="fas fa-palette"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Directeur Artistique</span>
+                                    <span class="role-person">Benjamin</span>
+                                </div>
+                            </div>
+                            <div class="role-card highlighted clickable" data-role="directeur-strategique">
+                                <div class="role-icon"><i class="fas fa-bullseye"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Directeur Stratégique</span>
+                                    <span class="role-person">Benjamin</span>
+                                </div>
+                            </div>
+                            <div class="role-card highlighted clickable" data-role="directeur-marketing">
+                                <div class="role-icon"><i class="fas fa-bullhorn"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Directeur Marketing</span>
+                                    <span class="role-person">Benjamin</span>
+                                </div>
+                            </div>
+                            <div class="role-card highlighted clickable" data-role="gestionnaire-projets">
+                                <div class="role-icon"><i class="fas fa-cogs"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Gestionnaire Projets</span>
+                                    <span class="role-person">Hugo / Milan</span>
+                                </div>
+                            </div>
+                            <div class="role-card highlighted clickable" data-role="tresorier">
+                                <div class="role-icon"><i class="fas fa-coins"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Trésorier</span>
+                                    <span class="role-person">Sofiane</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flèches depuis Niveau 1 vers Niveau 2 -->
+                    <div class="connection-branch level1-to-level2">
+                        <div class="connection-line-vertical"></div>
+                        <div class="connection-line-horizontal"></div>
+                    </div>
+
+                    <!-- Level 2: COORDINATION & ORGANISATION -->
+                    <div class="org-level level-2">
+                        <div class="level-header-section">
+                            <span class="level-badge">NIVEAU 2</span>
+                            <h3 class="level-title">COORDINATION &amp; ORGANISATION</h3>
+                        </div>
+                        <div class="roles-grid">
+                            <div class="role-card clickable" data-role="secretaire">
+                                <div class="role-icon"><i class="fas fa-folder-open"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Secrétaire</span>
+                                    <span class="role-person">Marie</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="rh-benevoles">
+                                <div class="role-icon"><i class="fas fa-users"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">RH / Bénévoles</span>
+                                    <span class="role-person">Moumou</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="commercial">
+                                <div class="role-icon"><i class="fas fa-briefcase"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Commercial</span>
+                                    <span class="role-person">Eddie</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="technique">
+                                <div class="role-icon"><i class="fas fa-wrench"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Technique</span>
+                                    <span class="role-person">Flow</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="manager-artistique">
+                                <div class="role-icon"><i class="fas fa-headphones"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Manager Artistique</span>
+                                    <span class="role-person">Flow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flèches depuis Niveau 2 vers Niveau 3 -->
+                    <div class="connection-branch level2-to-level3">
+                        <div class="connection-line-vertical"></div>
+                        <div class="connection-line-horizontal"></div>
+                    </div>
+
+                    <!-- Level 3: CRÉATION & EXÉCUTION -->
+                    <div class="org-level level-3">
+                        <div class="level-header-section">
+                            <span class="level-badge">NIVEAU 3</span>
+                            <h3 class="level-title">CRÉATION &amp; EXÉCUTION</h3>
+                        </div>
+                        <div class="roles-grid">
+                            <div class="role-card clickable" data-role="graphistes">
+                                <div class="role-icon"><i class="fas fa-pen-nib"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Graphistes</span>
+                                    <span class="role-person">Team Créa</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="media-video">
+                                <div class="role-icon"><i class="fas fa-camera"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Média / Vidéo</span>
+                                    <span class="role-person">Team Média</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="storytelling-cm">
+                                <div class="role-icon"><i class="fas fa-comment-dots"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Storytelling / CM</span>
+                                    <span class="role-person">Blondy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flèches depuis Niveau 3 vers Niveau 4 -->
+                    <div class="connection-branch level3-to-level4">
+                        <div class="connection-line-vertical"></div>
+                        <div class="connection-line-horizontal"></div>
+                    </div>
+
+                    <!-- Level 4: OPÉRATIONNEL & TERRAIN -->
+                    <div class="org-level level-4">
+                        <div class="level-header-section">
+                            <span class="level-badge">NIVEAU 4</span>
+                            <h3 class="level-title">OPÉRATIONNEL &amp; TERRAIN</h3>
+                        </div>
+                        <div class="roles-grid">
+                            <div class="role-card clickable" data-role="djs-artistes">
+                                <div class="role-icon"><i class="fas fa-music"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">DJs &amp; Artistes</span>
+                                    <span class="role-person">Résidents</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="benevoles">
+                                <div class="role-icon"><i class="fas fa-people-carry"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Bénévoles</span>
+                                    <span class="role-person">Team Terrain</span>
+                                </div>
+                            </div>
+                            <div class="role-card clickable" data-role="techniciens">
+                                <div class="role-icon"><i class="fas fa-tools"></i></div>
+                                <div class="role-info">
+                                    <span class="role-name">Techniciens</span>
+                                    <span class="role-person">Team Montage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal pour les détails du rôle -->
+            <div id="roleModal" class="role-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close" id="closeModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-header">
+                        <div class="modal-icon" id="modalIcon"></div>
+                        <h2 class="modal-title" id="modalTitle"></h2>
+                        <p class="modal-person" id="modalPerson"></p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h3 class="modal-section-title">RESPONSABILITÉS</h3>
+                            <p class="modal-description" id="modalDescription"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/gouvernance.js"></script>
+</body>
+</html>
+

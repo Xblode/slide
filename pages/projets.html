@@ -1,0 +1,809 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - BOOMKŒUR.EXE</title>
+    
+    <!-- Optimisation performance: preconnect pour CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Space+Mono:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header Container (chargé dynamiquement) -->
+    <div id="header-container"></div>
+
+    <!-- Sidebar Container (chargé dynamiquement) -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="projects-container" style="padding: 40px;">
+            <!-- Page Header -->
+            <div class="projects-header" style="margin-bottom: 40px; border-bottom: 2px solid #333; padding-bottom: 20px;">
+                <div class="flex items-center justify-between">
+                    <div>
+                <div class="flex items-center mb-2">
+                    <span class="w-3 h-3 accent-bg mr-3"></span>
+                            <p class="font-['Space_Mono'] text-gray-400 text-sm uppercase tracking-widest">OBJECTIFS STRATÉGIQUES</p>
+                </div>
+                <h1 class="font-['Oswald'] text-5xl font-bold uppercase text-white leading-none mt-4">
+                            PROJETS <span class="text-[#333] mx-2">//</span> <span class="accent-text">OBJECTIFS</span>
+                </h1>
+            </div>
+                    <div class="objectives-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">OBJECTIFS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">TERMINÉS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing KPIs Dashboard -->
+            <div class="marketing-kpis-dashboard" style="margin-bottom: 40px;">
+                <div class="kpis-header">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="kpis-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h2 class="kpis-title">INDICATEURS MARKETING GLOBAUX</h2>
+                    </div>
+                </div>
+                <div class="kpis-grid">
+                    <div class="kpi-card revenue">
+                        <div class="kpi-header">
+                            <i class="fas fa-euro-sign"></i>
+                            <span class="kpi-label">REVENUS ANNUELS</span>
+                        </div>
+                        <div class="kpi-value">
+                            <span class="kpi-current">45K€</span>
+                            <span class="kpi-target">/ 120K€</span>
+                        </div>
+                        <div class="kpi-progress">
+                            <div class="kpi-progress-bar">
+                                <div class="kpi-progress-fill" style="width: 37.5%"></div>
+                            </div>
+                            <span class="kpi-percentage">37.5%</span>
+                        </div>
+                        <div class="kpi-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+12% vs mois dernier</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card audience">
+                        <div class="kpi-header">
+                            <i class="fas fa-users"></i>
+                            <span class="kpi-label">AUDIENCE TOTALE</span>
+                        </div>
+                        <div class="kpi-value">
+                            <span class="kpi-current">18K</span>
+                            <span class="kpi-target">/ 50K</span>
+                        </div>
+                        <div class="kpi-progress">
+                            <div class="kpi-progress-bar">
+                                <div class="kpi-progress-fill" style="width: 36%"></div>
+                            </div>
+                            <span class="kpi-percentage">36%</span>
+                        </div>
+                        <div class="kpi-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+2.5K ce trimestre</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card engagement">
+                        <div class="kpi-header">
+                            <i class="fas fa-heart"></i>
+                            <span class="kpi-label">ENGAGEMENT MOYEN</span>
+                        </div>
+                        <div class="kpi-value">
+                            <span class="kpi-current">4.8%</span>
+                            <span class="kpi-target">/ 6%</span>
+                        </div>
+                        <div class="kpi-progress">
+                            <div class="kpi-progress-bar">
+                                <div class="kpi-progress-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="kpi-percentage">80%</span>
+                        </div>
+                        <div class="kpi-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+0.5% ce mois</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card conversion">
+                        <div class="kpi-header">
+                            <i class="fas fa-bullseye"></i>
+                            <span class="kpi-label">TAUX DE CONVERSION</span>
+                        </div>
+                        <div class="kpi-value">
+                            <span class="kpi-current">3.2%</span>
+                            <span class="kpi-target">/ 5%</span>
+                        </div>
+                        <div class="kpi-progress">
+                            <div class="kpi-progress-bar">
+                                <div class="kpi-progress-fill" style="width: 64%"></div>
+                            </div>
+                            <span class="kpi-percentage">64%</span>
+                        </div>
+                        <div class="kpi-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+0.8% ce trimestre</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card roi">
+                        <div class="kpi-header">
+                            <i class="fas fa-chart-pie"></i>
+                            <span class="kpi-label">ROI GLOBAL</span>
+                        </div>
+                        <div class="kpi-value">
+                            <span class="kpi-current">2.5x</span>
+                            <span class="kpi-target">/ 3x</span>
+                        </div>
+                        <div class="kpi-progress">
+                            <div class="kpi-progress-bar">
+                                <div class="kpi-progress-fill" style="width: 83%"></div>
+                            </div>
+                            <span class="kpi-percentage">83%</span>
+                        </div>
+                        <div class="kpi-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+0.3x ce semestre</span>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card revenue-growth">
+                        <div class="kpi-header">
+                            <i class="fas fa-rocket"></i>
+                            <span class="kpi-label">CROISSANCE REVENUS</span>
+                        </div>
+                        <div class="kpi-value">
+                            <span class="kpi-current">+28%</span>
+                            <span class="kpi-target">/ +40%</span>
+                        </div>
+                        <div class="kpi-progress">
+                            <div class="kpi-progress-bar">
+                                <div class="kpi-progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="kpi-percentage">70%</span>
+                        </div>
+                        <div class="kpi-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>vs année précédente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roadmap Annuelle 2026 -->
+            <div class="roadmap-2026" style="margin-bottom: 10px;">
+                <div style="padding: 0px 0;">
+                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 40px;">
+                        <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                            <i class="fas fa-road" style="color: #FF5500;"></i>
+                        </div>
+                        <div style="flex: 1;">
+                            <h2 style="font-family: 'Oswald', sans-serif; font-size: 36px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 3px;">
+                                ROADMAP 2026
+                            </h2>
+                            <p style="font-size: 13px; color: #999; margin: 8px 0 0 0; letter-spacing: 0.5px; font-family: 'Space Mono', monospace; text-transform: uppercase;">Vue d'ensemble stratégique de l'année • 15 événements • 5 villes • 95K€ CA</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline horizontale -->
+                    <div style="position: relative; margin: 50px 0;">
+                        <!-- Ligne de temps avec points -->
+                        <div style="position: relative; margin-bottom: 60px;">
+                            <div style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: #333; transform: translateY(-50%);"></div>
+                            <!-- Points de connexion -->
+                            <div style="position: absolute; top: 50%; left: 12.5%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: #0a0a0a; border: 2px solid #4ade80; border-radius: 50%;"></div>
+                            <div style="position: absolute; top: 50%; left: 37.5%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: #0a0a0a; border: 2px solid #FF5500; border-radius: 50%;"></div>
+                            <div style="position: absolute; top: 50%; left: 62.5%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: #0a0a0a; border: 2px solid #fbbf24; border-radius: 50%;"></div>
+                            <div style="position: absolute; top: 50%; left: 87.5%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: #0a0a0a; border: 2px solid #60a5fa; border-radius: 50%;"></div>
+                        </div>
+
+                        <!-- Q1, Q2, Q3, Q4 -->
+                        <div style="position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px;">
+                            <div class="roadmap-quarter-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4ade80'; this.style.background='#111'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='#333'; this.style.background='#0a0a0a'; this.style.transform='translateY(0)';">
+                                <div style="position: absolute; top: -12px; left: 24px; background: #0a0a0a; border: 2px solid #4ade80; color: #4ade80; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: 'Space Mono', monospace;">
+                                    <i class="fas fa-seedling" style="margin-right: 6px;"></i>Q1
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin: 20px 0 20px 0;">
+                                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                                        <i class="fas fa-building" style="color: #4ade80;"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 1px;">CONSOLIDATION</h3>
+                                </div>
+                                <div style="margin-bottom: 16px; padding: 16px; background: #111; border-left: 3px solid #4ade80;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                        <i class="fas fa-calendar-star" style="color: #4ade80; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Événements</p>
+                                    </div>
+                                    <p style="font-size: 24px; color: white; margin: 0; font-weight: 700; font-family: 'Oswald', sans-serif;">4</p>
+                                    <p style="font-size: 13px; color: #4ade80; margin: 6px 0 0 0; font-weight: 500;">Havre (3) + Rouen (1 test)</p>
+                                </div>
+                                <div style="margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                        <i class="fas fa-flag-checkered" style="color: #4ade80; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Jalons clés</p>
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #ccc; line-height: 1.8;">
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #4ade80; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Lancement Membership</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #4ade80; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Finalisation identité marque</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #4ade80; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>1er dossier subvention</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #4ade80; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>5-7 partenaires membership</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="padding: 14px; background: #111; border-left: 3px solid #4ade80; margin-top: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                        <i class="fas fa-bullseye" style="color: #4ade80; font-size: 12px;"></i>
+                                        <p style="font-size: 11px; color: #4ade80; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Focus</p>
+                                    </div>
+                                    <p style="font-size: 13px; color: #ccc; margin: 0; line-height: 1.6;">Consolider Le Havre • Tester Rouen • Structurer process</p>
+                                </div>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="roadmap-quarter-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#FF5500'; this.style.background='#111'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='#333'; this.style.background='#0a0a0a'; this.style.transform='translateY(0)';">
+                                <div style="position: absolute; top: -12px; left: 24px; background: #0a0a0a; border: 2px solid #FF5500; color: #FF5500; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: 'Space Mono', monospace;">
+                                    <i class="fas fa-rocket" style="margin-right: 6px;"></i>Q2
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin: 20px 0 20px 0;">
+                                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                                        <i class="fas fa-chart-line" style="color: #FF5500;"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 1px;">MONTÉE EN PUISSANCE</h3>
+                                </div>
+                                <div style="margin-bottom: 16px; padding: 16px; background: #111; border-left: 3px solid #FF5500;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                        <i class="fas fa-calendar-star" style="color: #FF5500; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Événements</p>
+                                    </div>
+                                    <p style="font-size: 24px; color: white; margin: 0; font-weight: 700; font-family: 'Oswald', sans-serif;">4</p>
+                                    <p style="font-size: 13px; color: #FF5500; margin: 6px 0 0 0; font-weight: 500;">GRANDE SOIRÉE PRINTEMPS (500p)</p>
+                                </div>
+                                <div style="margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                        <i class="fas fa-flag-checkered" style="color: #FF5500; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Jalons clés</p>
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #ccc; line-height: 1.8;">
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #FF5500; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>200 membres membership</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #FF5500; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>1ère collaboration collectif</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #FF5500; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Ancrage Rouen confirmé</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #FF5500; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Relations presse actives</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="padding: 14px; background: #111; border-left: 3px solid #FF5500; margin-top: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                        <i class="fas fa-bullseye" style="color: #FF5500; font-size: 12px;"></i>
+                                        <p style="font-size: 11px; color: #FF5500; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Focus</p>
+                                    </div>
+                                    <p style="font-size: 13px; color: #ccc; margin: 0; line-height: 1.6;">Event majeur printemps • Expansion • Collaborations</p>
+                                </div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="roadmap-quarter-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#fbbf24'; this.style.background='#111'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='#333'; this.style.background='#0a0a0a'; this.style.transform='translateY(0)';">
+                                <div style="position: absolute; top: -12px; left: 24px; background: #0a0a0a; border: 2px solid #fbbf24; color: #fbbf24; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: 'Space Mono', monospace;">
+                                    <i class="fas fa-expand-arrows-alt" style="margin-right: 6px;"></i>Q3
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin: 20px 0 20px 0;">
+                                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                                        <i class="fas fa-map-marked-alt" style="color: #fbbf24;"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 1px;">EXPANSION</h3>
+                                </div>
+                                <div style="margin-bottom: 16px; padding: 16px; background: #111; border-left: 3px solid #fbbf24;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                        <i class="fas fa-calendar-star" style="color: #fbbf24; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Événements</p>
+                                    </div>
+                                    <p style="font-size: 24px; color: white; margin: 0; font-weight: 700; font-family: 'Oswald', sans-serif;">4</p>
+                                    <p style="font-size: 13px; color: #fbbf24; margin: 6px 0 0 0; font-weight: 500;">Caen, Dieppe, Havre</p>
+                                </div>
+                                <div style="margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                        <i class="fas fa-flag-checkered" style="color: #fbbf24; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Jalons clés</p>
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #ccc; line-height: 1.8;">
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #fbbf24; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Tests Caen/Dieppe</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #fbbf24; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Collaboration #2</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #fbbf24; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Médias régionaux</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #fbbf24; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Capitaliser été</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="padding: 14px; background: #111; border-left: 3px solid #fbbf24; margin-top: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                        <i class="fas fa-bullseye" style="color: #fbbf24; font-size: 12px;"></i>
+                                        <p style="font-size: 11px; color: #fbbf24; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Focus</p>
+                                    </div>
+                                    <p style="font-size: 13px; color: #ccc; margin: 0; line-height: 1.6;">Expansion territoriale • Nouveaux marchés • Réseau</p>
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="roadmap-quarter-card" style="background: #0a0a0a; border: 2px solid #333; padding: 24px; position: relative; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#60a5fa'; this.style.background='#111'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='#333'; this.style.background='#0a0a0a'; this.style.transform='translateY(0)';">
+                                <div style="position: absolute; top: -12px; left: 24px; background: #0a0a0a; border: 2px solid #60a5fa; color: #60a5fa; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: 'Space Mono', monospace;">
+                                    <i class="fas fa-trophy" style="margin-right: 6px;"></i>Q4
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin: 20px 0 20px 0;">
+                                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                                        <i class="fas fa-star" style="color: #60a5fa;"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 1px;">CONSOLIDATION & FINAL</h3>
+                                </div>
+                                <div style="margin-bottom: 16px; padding: 16px; background: #111; border-left: 3px solid #60a5fa;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                        <i class="fas fa-calendar-star" style="color: #60a5fa; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Événements</p>
+                                    </div>
+                                    <p style="font-size: 24px; color: white; margin: 0; font-weight: 700; font-family: 'Oswald', sans-serif;">3</p>
+                                    <p style="font-size: 13px; color: #60a5fa; margin: 6px 0 0 0; font-weight: 500;">ANNIVERSARY 2 ANS (600p)</p>
+                                </div>
+                                <div style="margin-bottom: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                        <i class="fas fa-flag-checkered" style="color: #60a5fa; font-size: 14px;"></i>
+                                        <p style="font-size: 11px; color: #999; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Jalons clés</p>
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #ccc; line-height: 1.8;">
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #60a5fa; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Grand final Anniversary</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #60a5fa; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Bilan annuel complet</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #60a5fa; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Collaboration #3</span>
+                                        </li>
+                                        <li style="display: flex; align-items: start; gap: 8px;">
+                                            <i class="fas fa-check-circle" style="color: #60a5fa; font-size: 12px; margin-top: 4px; flex-shrink: 0;"></i>
+                                            <span>Stratégie 2027</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="padding: 14px; background: #111; border-left: 3px solid #60a5fa; margin-top: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                        <i class="fas fa-bullseye" style="color: #60a5fa; font-size: 12px;"></i>
+                                        <p style="font-size: 11px; color: #60a5fa; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Focus</p>
+                                    </div>
+                                    <p style="font-size: 13px; color: #ccc; margin: 0; line-height: 1.6;">Célébration • Bilan • Vision long terme</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vue d'ensemble annuelle -->
+                        <div style="position: relative; margin-top: 50px;">
+                            <div style="background: #0a0a0a; border: 2px solid #333; padding: 24px;">
+                                <div style="text-align: center; margin-bottom: 24px;">
+                                    <div style="width: 48px; height: 48px; background: #1a1a1a; border: 2px solid #333; border-radius: 0; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px;">
+                                        <i class="fas fa-chart-pie" style="color: #FF5500;"></i>
+                                    </div>
+                                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 22px; color: white; margin: 0; text-transform: uppercase; letter-spacing: 1px;">VUE D'ENSEMBLE 2026</h3>
+                                </div>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                                    <!-- Chiffres clés -->
+                                    <div>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                                            <div style="text-align: center; padding: 16px; background: #111; border: 2px solid #333; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#FF5500'; this.style.background='#161616';" onmouseout="this.style.borderColor='#333'; this.style.background='#111';">
+                                                <i class="fas fa-calendar-alt" style="color: #FF5500; font-size: 20px; margin-bottom: 8px;"></i>
+                                                <p style="font-size: 11px; color: #999; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Total événements</p>
+                                                <p style="font-size: 32px; color: #FF5500; font-weight: 700; margin: 0; font-family: 'Oswald', sans-serif;">15</p>
+                                            </div>
+                                            <div style="text-align: center; padding: 16px; background: #111; border: 2px solid #333; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4ade80'; this.style.background='#161616';" onmouseout="this.style.borderColor='#333'; this.style.background='#111';">
+                                                <i class="fas fa-users" style="color: #4ade80; font-size: 20px; margin-bottom: 8px;"></i>
+                                                <p style="font-size: 11px; color: #999; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Participants</p>
+                                                <p style="font-size: 32px; color: #4ade80; font-weight: 700; margin: 0; font-family: 'Oswald', sans-serif;">6500+</p>
+                                            </div>
+                                            <div style="text-align: center; padding: 16px; background: #111; border: 2px solid #333; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#fbbf24'; this.style.background='#161616';" onmouseout="this.style.borderColor='#333'; this.style.background='#111';">
+                                                <i class="fas fa-euro-sign" style="color: #fbbf24; font-size: 20px; margin-bottom: 8px;"></i>
+                                                <p style="font-size: 11px; color: #999; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">CA visé</p>
+                                                <p style="font-size: 32px; color: #fbbf24; font-weight: 700; margin: 0; font-family: 'Oswald', sans-serif;">95K€</p>
+                                            </div>
+                                            <div style="text-align: center; padding: 16px; background: #111; border: 2px solid #333; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#60a5fa'; this.style.background='#161616';" onmouseout="this.style.borderColor='#333'; this.style.background='#111';">
+                                                <i class="fas fa-map-marked-alt" style="color: #60a5fa; font-size: 20px; margin-bottom: 8px;"></i>
+                                                <p style="font-size: 11px; color: #999; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Villes</p>
+                                                <p style="font-size: 32px; color: #60a5fa; font-weight: 700; margin: 0; font-family: 'Oswald', sans-serif;">5</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Objectifs transversaux -->
+                                    <div style="padding: 20px; background: #111; border: 2px solid #333; border-left: 4px solid #FF5500; height: fit-content;">
+                                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                                            <i class="fas fa-bullseye" style="color: #FF5500; font-size: 16px;"></i>
+                                            <p style="font-size: 13px; color: #FF5500; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Space Mono', monospace;">Objectifs transversaux</p>
+                                        </div>
+                                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #ccc; line-height: 2.2;">
+                                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                                <i class="fas fa-circle" style="color: #FF5500; font-size: 6px;"></i>
+                                                <span>200 membres membership</span>
+                                            </li>
+                                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                                <i class="fas fa-circle" style="color: #FF5500; font-size: 6px;"></i>
+                                                <span>10 partenaires solides</span>
+                                            </li>
+                                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                                <i class="fas fa-circle" style="color: #FF5500; font-size: 6px;"></i>
+                                                <span>3 collaborations collectifs</span>
+                                            </li>
+                                            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                                <i class="fas fa-circle" style="color: #FF5500; font-size: 6px;"></i>
+                                                <span>15 nouveaux artistes</span>
+                                            </li>
+                                            <li style="display: flex; align-items: center; gap: 10px;">
+                                                <i class="fas fa-circle" style="color: #FF5500; font-size: 6px;"></i>
+                                                <span>Top 3 collectifs Normandie</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Objectives Grid (Cartes résumées) -->
+            <div class="objectives-grid" id="objectivesGrid">
+                <!-- Objective 1: Structuration du collectif -->
+                <div class="objective-card-summary" data-objective="structuration">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">STRUCTURATION DU COLLECTIF</h2>
+                            <p class="summary-category">Gouvernance • Organisation • Processus</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Refondation complète : gouvernance claire, rôles définis, processus décisionnels, outils de gestion et documentation. Transformation d'un collectif flou en organisation structurée.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Matthieu</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>Tous les membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 2: Merchandising -->
+                <div class="objective-card-summary" data-objective="developpement-merchandising">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">DÉVELOPPEMENT MERCHANDISING</h2>
+                            <p class="summary-category">Commercial • Branding</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Création d'une gamme complète de merchandising pour diversifier les revenus et renforcer l'identité de marque. Objectif : 15K€ de CA Q1 2026.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Benjamin</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>3 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>42%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 2b: Bilan Marketing 2025 -->
+                <div class="objective-card-summary" data-objective="bilan-marketing-2025">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">BILAN MARKETING 2025</h2>
+                            <p class="summary-category">Marketing • Analytics • Stratégie</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Analyse approfondie des données Instagram et Shotgun 2025 pour optimiser la stratégie marketing 2026. Objectif : +150% engagement, 50K followers.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Benjamin</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>4 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>72%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 3: Événement 2026 -->
+                <div class="objective-card-summary" data-objective="evenement-printemps-2026">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-calendar-star"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">ÉVÉNEMENT 2026</h2>
+                            <p class="summary-category">Événement • Production</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Organisation d'un événement majeur au printemps 2026 pour marquer le renouveau du collectif. Objectif : 3000 participants, 80K€ de CA.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Hugo</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>8 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>15%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 4: Réseaux Sociaux -->
+                <div class="objective-card-summary" data-objective="strategie-reseaux-sociaux">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">STRATÉGIE RÉSEAUX SOCIAUX</h2>
+                            <p class="summary-category">Communication • Création de Contenu</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Structuration de la communication digitale avec ligne éditoriale cohérente, calendrier de contenu et animation communautaire active.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Blondy</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>5 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>58%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 5: Partenariats -->
+                <div class="objective-card-summary" data-objective="partenariats-&-sponsors">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">DÉVELOPPEMENT PARTENARIATS & SPONSORS</h2>
+                            <p class="summary-category">Commercial • Business Development</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Prospection active de partenariats, sponsors et nouveaux lieux. Pipeline commercial structuré. Objectif : 50K€ deals signés, 8 partenaires, 5 nouveaux lieux.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Eddie</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>3 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>8%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 6: Membership -->
+                <div class="objective-card-summary" data-objective="programme-membership">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">PROGRAMME MEMBERSHIP</h2>
+                            <p class="summary-category">Communauté • Financement</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Lancement d'un système d'abonnement avec avantages exclusifs pour fidéliser la communauté. Objectif : 500 membres, 5K€/mois.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Benjamin</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>3 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Objective 7: Positionnement Culturel -->
+                <div class="objective-card-summary" data-objective="positionnement-culturel">
+                    <div class="summary-header">
+                        <div class="summary-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <div class="summary-title-section">
+                            <h2 class="summary-title">POSITIONNEMENT CULTUREL</h2>
+                            <p class="summary-category">Stratégie • Rayonnement</p>
+                        </div>
+                    </div>
+                    <div class="summary-body">
+                        <p class="summary-description">Développement d'une stratégie de positionnement culturel pour obtenir la reconnaissance institutionnelle et développer le rayonnement.</p>
+                        <div class="summary-meta">
+                            <div class="summary-meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Matthieu</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>3 membres</span>
+                            </div>
+                            <div class="summary-meta-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>35%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-footer">
+                        <button class="summary-btn">
+                            <span>Voir les détails</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Données complètes des objectifs (chargées dynamiquement depuis data/objectives/) -->
+            <div class="objectives-data" style="display: none;">
+                <!-- Les contenus des objectifs sont maintenant chargés dynamiquement via fetch() -->
+                <!-- Fichiers: structuration.html, developpement-merchandising.html, bilan-marketing-2025.html, etc. -->
+                <!-- Voir: assets/js/objectives-modal.js pour la logique de chargement -->
+            </div>
+        </div>
+    </main>
+    
+    
+    <script src="../assets/js/load-components.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/projets.js"></script>
+    <script src="../assets/js/objectives-editor.js"></script>
+    <script src="../assets/js/objectives-modal.js"></script>
+    <script src="../assets/js/kpis-manager.js"></script>
+</body>
+</html>
